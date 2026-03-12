@@ -35,7 +35,7 @@
   <canvas class="dot-animation" id="dot-canvas-right" width="600" height="600" style="position: absolute; right: 0; top: 0; z-index: -1000"></canvas>
 
   <section class="container hero d-flex flex-column justify-content-center align-items-center position-relative">
-    <img src="assets/lincus/logo.svg" alt="Lincus Logo" class="hero-logo">
+    <img src="assets/logo.svg" alt="Lincus Logo" class="hero-logo">
     <h1 class="hero-title lust-light">
       Lincus<span class="hero-blink">|</span>
     </h1>
@@ -285,7 +285,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
     <div class="process-row gx-3 row mt-3">
 
 
-      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down">
+      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
         <div class="process-card-inner h-100 d-flex flex-column">
           <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
             <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -309,7 +309,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down">
+      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
         <div class="process-card-inner h-100 d-flex flex-column">
           <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
             <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,7 +333,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down">
+      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
         <div class="process-card-inner h-100 d-flex flex-column">
           <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
             <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -357,7 +357,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down">
+      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
         <div class="process-card-inner h-100 d-flex flex-column">
           <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
             <svg class="card-arrow  arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -439,7 +439,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
       </div>
 
       <div class="row mt-3 pt-5 justify-content-end position-relative">
-        <img src="assets/lincus/laptop-img-1.png" alt="Lincus Profile" class="vision-img mt-5 z-1">
+        <img src="assets/lincus-mockup.png" alt="Lincus Profile" class="vision-img mt-5 z-1">
 
 
         <div class="col-7 position-absolute vision-cards z-2">
@@ -518,7 +518,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
 
     <div class="row build-row-1">
       <div class="col-lg-6 ps-0">
-        <img class="img-fluid w-100" src="assets/lincus/laptop-img-2.png" alt="Laptop on table with lincus open">
+        <img class="img-fluid w-100" src="assets/lincus-action.png" alt="Laptop on table with lincus open">
       </div>
       <div class="col-lg-6 d-flex align-items-center justify-content-center">
         <p class="fs-5 inter-light">
@@ -550,14 +550,14 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
           <div class="mac-editor text-light-grey fs-6 py-4 px-3 d-flex flex-column gap-5">
             <div class="line-group d-flex flex-column align-items-start">
               <span class="editor-line tab-0" style="color: #aaaaaa">// Single faculty profile page</span>
-              <span class="editor-line tab-0"><span style="color: #84D3EC">public function</span> show(Request <span style="color: #FF546F">$request</span>, <span style="color: #FF546F">$slug</span>, <span style="color: #FF546F">$tab</span> = <span style="color: #C9E590">'show'</span>){</span>
-              <span class="editor-line tab-1"><span style="color: #FF546F">$person</span> = <span style="color: #FF546F">$this</span>->loadPersonAndRelationships(<span style="color: #FF546F">$slug</span>);</span>
-              <span class="editor-line tab-1"><span style="color: #FF546F">$user</span> = <span style="color: #FF546F">$person</span>->user;</span>
-              <span class="editor-line tab-1"><span style="color: #FF546F">$coauthors</span> = <span style="color: #FF546F">$this</span>->getCoauthorsData(<span style="color: #FF546F">$person</span>);</span>
-              <span class="editor-line tab-1"><span style="color: #FF546F">$scopusMap</span> = <span style="color: #FF546F">$this</span>->getScopusMap(<span style="color: #FF546F">$person</span>);</span>
+              <span class="editor-line tab-0"><span style="color: #84D3EC">public function</span> show(Request <span style="color: #FF6179">$request</span>, <span style="color: #FF6179">$slug</span>, <span style="color: #FF6179">$tab</span> = <span style="color: #C9E590">'show'</span>){</span>
+              <span class="editor-line tab-1"><span style="color: #FF6179">$person</span> = <span style="color: #FF6179">$this</span>->loadPersonAndRelationships(<span style="color: #FF6179">$slug</span>);</span>
+              <span class="editor-line tab-1"><span style="color: #FF6179">$user</span> = <span style="color: #FF6179">$person</span>->user;</span>
+              <span class="editor-line tab-1"><span style="color: #FF6179">$coauthors</span> = <span style="color: #FF6179">$this</span>->getCoauthorsData(<span style="color: #FF6179">$person</span>);</span>
+              <span class="editor-line tab-1"><span style="color: #FF6179">$scopusMap</span> = <span style="color: #FF6179">$this</span>->getScopusMap(<span style="color: #FF6179">$person</span>);</span>
               <span class="editor-line tab-1" style="color: #aaaaaa">// Grant sorting logic, default is year descending</span>
-              <span class="editor-line tab-1"><span style="color: #FF546F">$grantSort</span> = <span style="color: #FF546F">$request</span>->input(<span style="color: #C9E590">'grantSort'</span>, <span style="color: #C9E590">'year_desc'</span>);</span>
-              <span class="editor-line tab-1"><span style="color: #FF546F">$grants</span> = <span style="color: #FF546F">$this</span>->sortGrants(<span style="color: #FF546F">$person</span>->grants, <span style="color: #FF546F">$grantSort</span>);</span>
+              <span class="editor-line tab-1"><span style="color: #FF6179">$grantSort</span> = <span style="color: #FF6179">$request</span>->input(<span style="color: #C9E590">'grantSort'</span>, <span style="color: #C9E590">'year_desc'</span>);</span>
+              <span class="editor-line tab-1"><span style="color: #FF6179">$grants</span> = <span style="color: #FF6179">$this</span>->sortGrants(<span style="color: #FF6179">$person</span>->grants, <span style="color: #FF6179">$grantSort</span>);</span>
 
             </div>
 
@@ -567,7 +567,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
     </div>
   </section>
 
-  <section class="container-fluid result-wrap text-black pt-5 pb-5 position-relative">
+  <section class="result-wrap text-black pt-5 pb-5 position-relative rounded-bottom-4">
     <div class="container result">
           <span class="text-start inter-light fs-5">07 The Result</span>
 
@@ -714,8 +714,8 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
         </div>
       </div>
       -->
-      <div class="align-items-center d-flex gap-3 result-logo-wrap w-fit mt-4 px-4 rounded-5">
-        <img src="assets/lincus/logo.svg" alt="Lincus Logo" class="result-logo">
+      <div class="align-items-center d-flex gap-3 mt-4 rounded-5">
+        <img src="assets/logo.svg" alt="Lincus Logo" class="result-logo">
         <span class="lust-semi fs-xl">Lincus</span>
       </div>
 
@@ -784,7 +784,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
         </div>
         <div class="col-6">
           <div class="img-wrap position-relative">
-            <img src="assets/lincus/screenshot-1.png" alt="Screenshot of search page" class="img-fluid screenshot">
+            <img src="assets/lincus-map.png" alt="Screenshot of search page" class="img-fluid screenshot">
           </div>
         </div>
         <div class="col-3">
@@ -847,12 +847,24 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
         </div>
         <div class="col-1"></div>
         <div class="col-7 lust-reg">
-          <img src="assets/lincus/image%2048.png">
+          <img src="assets/wordbubble.png" style="width:100%;" alt="lincus word bubble example">
         </div>
       </div>
     </div>
 
-    <div class="testimonies-row-1 d-flex gap-2 mb-4"></div>
+    <div class="testimonies-wrap">
+      <button style="margin:0px 20px;"
+        id="testimonials-control-btn" 
+        class="testimonials-control-btn" 
+        aria-label="Pause testimonials carousel" 
+        aria-pressed="false"
+        title="Press to pause/play">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/>
+        </svg>
+      </button>
+      <div class="testimonies-row-1 d-flex gap-2 mb-4"></div>
+    </div>
 
   </section>
 
@@ -977,7 +989,7 @@ At i3, we begin by putting something real in front of people. A rough draft, a w
       <div class="col-lg-6">
         <figure class="position-relative h-100 m-0">
           <img
-            src="assets/lincus/maggie-working.png"
+            src="assets/mags.png"
             alt="Maggie working on a project"
             class="img-fluid w-100 h-100 object-fit-cover rounded-1"
             style="min-height:340px;"

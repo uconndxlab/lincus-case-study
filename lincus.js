@@ -361,8 +361,22 @@ observer.observe(svgEl);
 
   const processCards = Array.from(document.querySelectorAll('.process-card'));
   processCards.forEach(card => {
-    card.addEventListener('pointerdown', () => card.classList.toggle('flipped'))
-  })
+    // Handle mouse/touch interactions
+    card.addEventListener('pointerdown', () => toggleCard(card));
+    
+    // Handle keyboard interactions (Enter and Space)
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleCard(card);
+      }
+    });
+  });
+  
+  function toggleCard(card) {
+    const isFlipped = card.classList.toggle('flipped');
+    card.setAttribute('aria-pressed', isFlipped);
+  }
 
 
   const dashObserver = new IntersectionObserver(entries => {
@@ -490,17 +504,14 @@ observer.observe(svgEl);
 
 const testimonies = [
   {
-    img: 'assets/lincus/testimonial-img-1.png',
     quote: '“Lincus serves as a critical first step by making UConn’s research ecosystem visible and accessible, allowing students to explore ongoing projects across disciplines.”',
     name: 'Micah Heumann'
   },
   {
-    img: 'assets/lincus/testimonial-img-2.png',
     quote: '“I am so proud to be the biggest, baddest blue dot in the UConn museum multiverse. I\'ve been on Lincus since 2013 or so and this overhaul makes it much more intuitive, useful and updateable.”',
     name: 'Clarissa Ceglio, Ph.D.'
   },
   {
-    img: 'assets/lincus/testimonial-img-3.png',
     quote: '“Without Lincus, I would have to manually search individual department websites and faculty pages to piece together expertise areas, a time‑consuming and far less efficient process. Lincus streamlines all of that into one reliable tool.”',
     name: 'Kaylei Arcangel'
   }
@@ -513,7 +524,7 @@ const row1Tests = testimonies.slice();
 const testimoniesRow1 = document.querySelector('.testimonies-row-1');
 
 // animation settings
-let speed = 0.6;
+let speed = 0.3;
 let offset1 = 0;
 let testGap = 15;
 
@@ -530,11 +541,7 @@ function createTestimonyCard(testimony) {
 
   const card = document.createElement('div');
   card.className = 'testimony-card d-flex p-3 gap-4 bg-white radius align-items-center';
-  const img = document.createElement('img');
-  img.className = 'testimony-img';
-  console.log(testimony.img)
-  img.src = testimony.img;
-  img.alt = testimony.name;
+
 
   const text = document.createElement('div');
   text.className = 'testimony-text d-flex flex-column text-start';
@@ -550,7 +557,6 @@ function createTestimonyCard(testimony) {
   text.appendChild(quote);
   text.appendChild(name);
 
-  card.appendChild(img);
   card.appendChild(text);
   wrap.appendChild(card);
 
@@ -650,6 +656,60 @@ requestAnimationFrame(() => {
   animateTestimonies();
 });
 
+// Pause/Play button functionality
+const controlBtn = document.getElementById('testimonials-control-btn');
+if (controlBtn) {
+  controlBtn.addEventListener('click', () => {
+    if (updateTestimonies) {
+      pauseTestimonies();
+      controlBtn.classList.add('paused');
+      controlBtn.setAttribute('aria-label', 'Play testimonials carousel');
+      controlBtn.setAttribute('aria-pressed', 'true');
+      // Change icon to play
+      controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="currentColor"/></svg>';
+    } else {
+      playTestimonies();
+      controlBtn.classList.remove('paused');
+      controlBtn.setAttribute('aria-label', 'Pause testimonials carousel');
+      controlBtn.setAttribute('aria-pressed', 'false');
+      // Change icon to pause
+      controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/></svg>';
+    }
+  });
+
+  // Keyboard support
+  controlBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      controlBtn.click();
+    }
+  });
+
+  // Pause on hover
+  const testimoniesRow = document.querySelector('.testimonies-row-1');
+  if (testimoniesRow) {
+    testimoniesRow.addEventListener('mouseenter', () => {
+      if (updateTestimonies) {
+        pauseTestimonies();
+        controlBtn.classList.add('paused');
+        controlBtn.setAttribute('aria-label', 'Play testimonials carousel');
+        controlBtn.setAttribute('aria-pressed', 'true');
+        controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="currentColor"/></svg>';
+      }
+    });
+
+    testimoniesRow.addEventListener('mouseleave', () => {
+      if (!updateTestimonies) {
+        playTestimonies();
+        controlBtn.classList.remove('paused');
+        controlBtn.setAttribute('aria-label', 'Pause testimonials carousel');
+        controlBtn.setAttribute('aria-pressed', 'false');
+        controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/></svg>';
+      }
+    });
+  }
+}
+
 window.addEventListener('resize', () => {
   // rebuild cards (could need more) and reset offset to avoid drifting
   const prevOffset = offset1;
@@ -658,7 +718,6 @@ window.addEventListener('resize', () => {
   offset1 = prevOffset % seamlessWidth;
   positionTestimonyCards();
 });
-
 
 
 })
