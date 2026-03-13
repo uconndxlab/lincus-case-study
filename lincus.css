@@ -506,6 +506,8 @@ svg .shown {
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(0deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4));
+  height:100%;
 }
 .vision-img {
   right: 0;
@@ -812,12 +814,11 @@ span.tab-3 {
   content: '' ;
 }
 
-.screenshot-item, .screenshot-item-abs {
+.screenshot-item {
   box-shadow: rgba(135,135,135,.1) 0px 4px 8px;
 }
 
-.screenshot-item:after,
-.screenshot-item-abs:after {
+.screenshot-item:after {
   position: absolute;
   content: '';
   background: white;
@@ -832,27 +833,23 @@ span.tab-3 {
 
 
 
-.screenshot-item.filter .item-path {
+.filter .item-path {
   position: absolute;
   left: 50%;
   top: -62%;
 }
-.screenshot-item.search .item-path {
+.search .item-path {
   position: absolute;
   top: 50%;
   z-index: 3;
   left: -47%;
   transform: translateY(-50%);
 }
-.screenshot-item.connect .item-path {
+.connect .item-path {
     position: absolute;
     z-index: 3;
     bottom: 1%;
     left: -47.5%;
-}
-
-.screenshot-item-abs.filter .item-path {
-  position: absolute;
 }
 
 .screenshot-item.search {
@@ -861,12 +858,31 @@ span.tab-3 {
 .summarize-row {
   margin-top: 5rem;
 }
-
 .summarize .item-path {
+  position: absolute;
+  left: 99%;        /* left edge of SVG = right edge of parent */
+  top: 50%;          /* vertically center */
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+@media (max-width: 1200px) {
+
+  .summarize {
+    position: relative;
+  }
+
+  .summarize .item-path {
     position: absolute;
-    right: -47%;
-    bottom: 40%;
+    top: 95%;      /* bottom of card */
+    left: 50%;
+    transform-origin: top left;
+    transform: translateX(-50%) rotate(90deg);
     z-index: 2;
+  }
+  .screenshot-item {
+    margin-bottom:80px!important;
+  }
 }
 
 .testimonies-row-1 {

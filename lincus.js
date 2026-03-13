@@ -69,6 +69,7 @@ function draw(ctx, cx, cy, deltaTime, layers) {
   });
 }
 
+
 function render() {
   const left = resize(leftCanvas, leftCtx);
   const right = resize(rightCanvas, rightCtx);
@@ -494,17 +495,14 @@ svg.style("visibility", "visible");
 
 const testimonies = [
   {
-    img: 'assets/lincus/testimonial-img-1.png',
     quote: '“Lincus serves as a critical first step by making UConn’s research ecosystem visible and accessible, allowing students to explore ongoing projects across disciplines.”',
     name: 'Micah Heumann'
   },
   {
-    img: 'assets/lincus/testimonial-img-2.png',
     quote: '“I am so proud to be the biggest, baddest blue dot in the UConn museum multiverse. I\'ve been on Lincus since 2013 or so and this overhaul makes it much more intuitive, useful and updateable.”',
     name: 'Clarissa Ceglio, Ph.D.'
   },
   {
-    img: 'assets/lincus/testimonial-img-3.png',
     quote: '“Without Lincus, I would have to manually search individual department websites and faculty pages to piece together expertise areas, a time‑consuming and far less efficient process. Lincus streamlines all of that into one reliable tool.”',
     name: 'Kaylei Arcangel'
   }
@@ -701,9 +699,6 @@ if (controlBtn) {
       }
     });
   }
-
-
-
 }
 
 window.addEventListener('resize', () => {
