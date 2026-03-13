@@ -524,7 +524,7 @@ const row1Tests = testimonies.slice();
 const testimoniesRow1 = document.querySelector('.testimonies-row-1');
 
 // animation settings
-let speed = 0.3;
+let speed = 0.5;
 let offset1 = 0;
 let testGap = 15;
 

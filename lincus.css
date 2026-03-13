@@ -426,11 +426,11 @@ svg .shown {
 .challenge-card:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   transform: translateY(-3px);
-  animation: glide 0.8s ease-out forwards;
+  animation: glide 0.6s ease-out forwards;
 }
 
 .challenge-card:not(:hover) {
-  animation: glide-back 0.8s ease-out forwards;
+  animation: glide-back 0.6s ease-out forwards;
 }
 
 .challenge-card::after {
@@ -487,6 +487,7 @@ svg .shown {
 .vision-card {
   min-height: 300px;
   background: linear-gradient(0deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4));
+  height:100%;
 }
 
 .vision-img {
@@ -543,11 +544,12 @@ svg .shown {
   width:100%;
   height:auto;
   display:block;
+    border-radius:0px 10px 10px 0;
 }
 
 .mac-editor {
   width: 100%;
-  height: 450px;
+  height: 420px;
   background: #253238;
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
@@ -1018,13 +1020,6 @@ a:hover .yellow-shadow-sm:after {
 .quote-wrap {
   padding-top: 5rem;
   padding-bottom: 3rem;
-}
-.img-caption {
-  left: 50%;
-  bottom: 5px;
-  transform: translateX(-50% );
-  width: fit-content;
-  text-wrap: nowrap;
 }
 
 .maggie-row {
