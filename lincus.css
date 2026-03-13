@@ -481,13 +481,25 @@ svg .shown {
   top: -27px;
   transform: rotate(185deg);
 }
+@media (min-width:1200px){
 .vision-cards {
+  position:absolute;
   left: 0;
-  top: 0;
+  top: 0%;
+  min-height: 250px;
 }
-
+}
+@media (min-width:1400px){
+.vision-cards {
+  top: 10%;
+}
+}
+@media (min-width:1600px){
+.vision-cards {
+  top: 20%;
+}
+}
 .vision-card {
-  min-height: 300px;
   background: linear-gradient(0deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4));
   height:100%;
 }
@@ -821,12 +833,31 @@ span.tab-3 {
 .summarize-row {
   margin-top: 5rem;
 }
-
 .summarize .item-path {
+  position: absolute;
+  left: 99%;        /* left edge of SVG = right edge of parent */
+  top: 50%;          /* vertically center */
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+@media (max-width: 1200px) {
+
+  .summarize {
+    position: relative;
+  }
+
+  .summarize .item-path {
     position: absolute;
-    right: -47%;
-    bottom: 40%;
+    top: 95%;      /* bottom of card */
+    left: 50%;
+    transform-origin: top left;
+    transform: translateX(-50%) rotate(90deg);
     z-index: 2;
+  }
+  .screenshot-item {
+    margin-bottom:80px!important;
+  }
 }
 
 .testimonies-row-1 {
