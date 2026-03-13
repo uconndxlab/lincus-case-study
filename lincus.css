@@ -428,11 +428,11 @@ svg .shown {
 .challenge-card:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   transform: translateY(-3px);
-  animation: glide 0.8s ease-out forwards;
+  animation: glide 0.6s ease-out forwards;
 }
 
 .challenge-card:not(:hover) {
-  animation: glide-back 0.8s ease-out forwards;
+  animation: glide-back 0.6s ease-out forwards;
 }
 
 .challenge-card::after {
@@ -489,6 +489,7 @@ svg .shown {
 .vision-card {
   min-height: 300px;
   background: linear-gradient(0deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4));
+  height:100%;
 }
 
 .vision-img {
@@ -545,11 +546,12 @@ svg .shown {
   width:100%;
   height:auto;
   display:block;
+    border-radius:0px 10px 10px 0;
 }
 
 .mac-editor {
   width: 100%;
-  height: 450px;
+  height: 420px;
   background: #253238;
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
@@ -759,13 +761,12 @@ span.tab-3 {
   width: 100%;
   position: relative;
   z-index: 2;
+    border-radius:15px;
 }
-
 .img-wrap:after {
   width: 100%;
-  height: 107%;
+  height: 100%;
   border-radius: 15px;
-  background: #E1E3E4;
   bottom: 0;
   z-index: 0;
   position: absolute;
@@ -877,7 +878,52 @@ span.tab-3 {
   padding-bottom: 0.5rem;
 }
 
+.testimonies-wrap {
+  position: relative;
+  overflow: hidden;
+}
 
+.testimonials-control-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 8px;
+  background: var(--color-yellow);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--color-midnight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 0;
+}
+
+.testimonials-control-btn:hover,
+.testimonials-control-btn:focus {
+  background: var(--color-yellow-dark);
+  outline: 2px solid var(--color-midnight);
+  outline-offset: 2px;
+}
+
+.testimonials-control-btn:active {
+  transform: scale(0.95);
+}
+
+.testimonials-control-btn.paused {
+  background: #60A7CD;
+}
+
+.testimonials-control-btn.paused:hover,
+.testimonials-control-btn.paused:focus {
+  background: #4A8DAF;
+}
+
+.testimony-card {
+  border-bottom:5px solid #F8B81D;
+}
 .stat-bar {
   background: var(--color-off-white);
   position: relative;
@@ -976,13 +1022,6 @@ a:hover .yellow-shadow-sm:after {
 .quote-wrap {
   padding-top: 5rem;
   padding-bottom: 3rem;
-}
-.img-caption {
-  left: 50%;
-  bottom: 5px;
-  transform: translateX(-50% );
-  width: fit-content;
-  text-wrap: nowrap;
 }
 
 .maggie-row {
