@@ -34,973 +34,1088 @@
   <canvas class="dot-animation" id="dot-canvas-left" width="600" height="600" style="position: absolute; left: 0; top: 0; z-index: -1000;"></canvas>
   <canvas class="dot-animation" id="dot-canvas-right" width="600" height="600" style="position: absolute; right: 0; top: 0; z-index: -1000"></canvas>
 
-  <section class="container hero d-flex flex-column justify-content-center align-items-center position-relative">
-    <img src="assets/logo.svg" alt="Lincus Logo" class="hero-logo">
-    <h1 class="hero-title lust-light">
-      Lincus<span class="hero-blink">|</span>
-    </h1>
-    <h2 class="fs-3 inter-light text-slate-grey">A Scholarly Research Aggregator</h2>
-    <span class="inter-reg bg-white text-slate-grey fs-6 mt-2 py-1 px-4 hero-published" style="border:1px solid #CED0D6">PUBLISHED 03/13/2026</span>
+  <!-- Hero -->
+  <section>
+    <div class="container hero d-flex flex-column justify-content-center align-items-center position-relative">
+      <img src="assets/logo.svg" alt="Lincus Logo" class="hero-logo">
+      <h1 class="hero-title lust-light">
+        Lincus<span class="hero-blink">|</span>
+      </h1>
+      <h2 class="fs-3 inter-light text-slate-grey">A Scholarly Research Aggregator</h2>
+      <span class="inter-reg bg-white text-slate-grey fs-6 mt-2 py-1 px-4 hero-published" style="border:1px solid #CED0D6">PUBLISHED 03/13/2026</span>
+    </div>
   </section>
 
-  <section class="container overview position-relative">
-    <span class="text-start inter-light fs-5">01 Overview</span>
-    <div class="row mb-2">
-      <p class="w-100 fs-3 inter-light">
-      Finding the <span class="inter-med">right expert</span> at a large research university can be harder than it should be. While faculty webpages provide basic information, they rarely capture the depth of a scholar’s work or the <span class="inter-med">connections</span> that shape <span class="inter-med">academic research.</span></p>
-    </div>
-
-    <div class="row gx-2 pb-2 justify-content-between">
-      <div class="col-lg-4 col-md-6 mb-1 mb-lg-0 mx-auto mt-1" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-12 d-flex stat-wrap radius contributions align-items-center justify-content-between ps-2 pe-2 py-2">
-          <div class="stat d-flex flex-column ms-3">
-            <div class="contribution-odometer odometer-auto-theme" style="font-size: 30px; font-weight: bold; display: inline-block;">0</div>
-            <span class="fs-6 lust-light stat-label">Contributions</span>
-        </div>
-          <svg width="183" height="155" viewBox="0 0 183 155"  class="icon" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="7.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
-          <circle cx="28.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="49.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
-          <circle cx="70.5" cy="7.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="91.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="112.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
-          <circle cx="133.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="154.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="175.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="7.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="28.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
-          <circle cx="49.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="70.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="91.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
-          <circle cx="112.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="133.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="154.5" cy="27.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="175.5" cy="27.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="7.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
-          <circle cx="28.5" cy="47.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="49.5" cy="47.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="70.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="91.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="112.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="133.5" cy="47.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="154.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="175.5" cy="47.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="7.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="28.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="49.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="70.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="91.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="112.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
-          <circle cx="133.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="154.5" cy="67.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="175.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="7.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="28.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="49.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
-          <circle cx="70.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="91.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="112.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="133.5" cy="87.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="154.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="175.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="7.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="28.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
-          <circle cx="49.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="70.5" cy="107.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="91.5" cy="107.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="112.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="133.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="154.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="175.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="7.5" cy="127.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="28.5" cy="127.5" r="7.5" fill="#F8B81D"/>
-          <circle cx="49.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="70.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="91.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="112.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
-          <circle cx="133.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="154.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
-          <circle cx="175.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="7.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="28.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="49.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="70.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
-          <circle cx="91.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="112.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
-          <circle cx="133.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
-          <circle cx="154.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
-          <circle cx="175.5" cy="147.5" r="7.5" fill="#F8B81D"/>
-        </svg>
-        </div>
+  <!-- Overview -->
+  <section>
+    <div class="container overview position-relative">
+      <span class="text-start inter-light fs-5">01 Overview</span>
+      <div class="row mb-2">
+        <p class="w-100 fs-3 inter-light">
+        Finding the <span class="inter-med">right expert</span> at a large research university can be harder than it should be. While faculty webpages provide basic information, they rarely capture the depth of a scholar’s work or the <span class="inter-med">connections</span> that shape <span class="inter-med">academic research.</span></p>
       </div>
 
-      <div class="col-lg-4 col-md-6 mb-1 mb-lg-0 mx-auto mt-1" data-aos="fade-up" data-aos-delay="350">
-        <div class="col-12 d-flex stat-wrap radius faculty align-items-center justify-content-between px-2 h-100">
-        <div class="stat d-flex flex-column ms-3">
-          <div class="faculty-odometer odometer-auto-theme" style="font-size: 30px; font-weight: bold; display: inline-block;">0</div>
-          <span class="fs-6 lust-light stat-label">Faculty</span>
-        </div>
-        <svg width="179" height="156" viewBox="0 0 179 156" fill="none" class="icon align-self-end" xmlns="http://www.w3.org/2000/svg">
-          <g opacity="0.3" id="faculty-icon-1">
-            <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
-            <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
-            <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
-            <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
-          </g>
-          <g opacity="0.6" id="faculty-icon-2">
-            <path d="M148.87 78.6494C153.011 78.6494 157.089 79.135 161.104 80.1074C165.12 81.0799 169.073 82.5394 172.963 84.4844C174.782 85.4255 176.241 86.7902 177.339 88.5781C178.437 90.3661 178.985 92.3269 178.985 94.46V105H118.755V94.46C118.755 92.327 119.304 90.3661 120.401 88.5781C121.499 86.79 122.959 85.4255 124.778 84.4844C128.668 82.5395 132.62 81.0799 136.636 80.1074C140.651 79.135 144.729 78.6494 148.87 78.6494ZM164.876 37.5371V48.9189H162.03V39.1016L159.185 40.667V48.8799C159.292 48.9821 159.399 49.0864 159.505 49.1924C162.454 52.1412 163.928 55.6863 163.928 59.8271C163.928 63.9679 162.454 67.5132 159.505 70.4619C156.556 73.4106 153.011 74.8848 148.87 74.8848C144.729 74.8848 141.184 73.4106 138.235 70.4619C135.287 67.5132 133.813 63.9679 133.812 59.8271C133.812 55.6863 135.287 52.1412 138.235 49.1924C138.571 48.8566 138.915 48.5407 139.267 48.2432V40.667L133.575 37.5371L149.226 29L164.876 37.5371Z" fill="#F8B81D" fill-opacity="0.8"/>
-            <path d="M148.87 78.6494C153.011 78.6494 157.089 79.135 161.104 80.1074C165.12 81.0799 169.073 82.5394 172.963 84.4844C174.782 85.4255 176.241 86.7902 177.339 88.5781C178.437 90.3661 178.985 92.3269 178.985 94.46V105H118.755V94.46C118.755 92.327 119.304 90.3661 120.401 88.5781C121.499 86.79 122.959 85.4255 124.778 84.4844C128.668 82.5395 132.62 81.0799 136.636 80.1074C140.651 79.135 144.729 78.6494 148.87 78.6494ZM164.876 37.5371V48.9189H162.03V39.1016L159.185 40.667V48.8799C159.292 48.9821 159.399 49.0864 159.505 49.1924C162.454 52.1412 163.928 55.6863 163.928 59.8271C163.928 63.9679 162.454 67.5132 159.505 70.4619C156.556 73.4106 153.011 74.8848 148.87 74.8848C144.729 74.8848 141.184 73.4106 138.235 70.4619C135.287 67.5132 133.813 63.9679 133.812 59.8271C133.812 55.6863 135.287 52.1412 138.235 49.1924C138.571 48.8566 138.915 48.5407 139.267 48.2432V40.667L133.575 37.5371L149.226 29L164.876 37.5371Z" fill="#F8B81D" fill-opacity="0.8"/>
-            <path d="M148.87 78.6494C153.011 78.6494 157.089 79.135 161.104 80.1074C165.12 81.0799 169.073 82.5394 172.963 84.4844C174.782 85.4255 176.241 86.7902 177.339 88.5781C178.437 90.3661 178.985 92.3269 178.985 94.46V105H118.755V94.46C118.755 92.327 119.304 90.3661 120.401 88.5781C121.499 86.79 122.959 85.4255 124.778 84.4844C128.668 82.5395 132.62 81.0799 136.636 80.1074C140.651 79.135 144.729 78.6494 148.87 78.6494ZM164.876 37.5371V48.9189H162.03V39.1016L159.185 40.667V48.8799C159.292 48.9821 159.399 49.0864 159.505 49.1924C162.454 52.1412 163.928 55.6863 163.928 59.8271C163.928 63.9679 162.454 67.5132 159.505 70.4619C156.556 73.4106 153.011 74.8848 148.87 74.8848C144.729 74.8848 141.184 73.4106 138.235 70.4619C135.287 67.5132 133.813 63.9679 133.812 59.8271C133.812 55.6863 135.287 52.1412 138.235 49.1924C138.571 48.8566 138.915 48.5407 139.267 48.2432V40.667L133.575 37.5371L149.226 29L164.876 37.5371Z" fill="#F8B81D" fill-opacity="0.8"/>
-            <path d="M148.87 78.6494C153.011 78.6494 157.089 79.135 161.104 80.1074C165.12 81.0799 169.073 82.5394 172.963 84.4844C174.782 85.4255 176.241 86.7902 177.339 88.5781C178.437 90.3661 178.985 92.3269 178.985 94.46V105H118.755V94.46C118.755 92.327 119.304 90.3661 120.401 88.5781C121.499 86.79 122.959 85.4255 124.778 84.4844C128.668 82.5395 132.62 81.0799 136.636 80.1074C140.651 79.135 144.729 78.6494 148.87 78.6494ZM164.876 37.5371V48.9189H162.03V39.1016L159.185 40.667V48.8799C159.292 48.9821 159.399 49.0864 159.505 49.1924C162.454 52.1412 163.928 55.6863 163.928 59.8271C163.928 63.9679 162.454 67.5132 159.505 70.4619C156.556 73.4106 153.011 74.8848 148.87 74.8848C144.729 74.8848 141.184 73.4106 138.235 70.4619C135.287 67.5132 133.813 63.9679 133.812 59.8271C133.812 55.6863 135.287 52.1412 138.235 49.1924C138.571 48.8566 138.915 48.5407 139.267 48.2432V40.667L133.575 37.5371L149.226 29L164.876 37.5371Z" fill="#F8B81D" fill-opacity="0.8"/>
-          </g>
-          <g id="faculty-icon-3">
-            <path d="M61.3059 107.282C57.1608 103.137 55.0882 98.1542 55.0882 92.3334C55.0882 86.5125 57.1608 81.5295 61.3059 77.3844C65.4511 73.2393 70.4341 71.1667 76.2549 71.1667C82.0757 71.1667 87.0587 73.2393 91.2039 77.3844C95.349 81.5295 97.4216 86.5125 97.4216 92.3334C97.4216 98.1542 95.349 103.137 91.2039 107.282C87.0587 111.427 82.0757 113.5 76.2549 113.5C70.4341 113.5 65.4511 111.427 61.3059 107.282ZM33.9216 155.833V141.017C33.9216 138.018 34.6933 135.262 36.2367 132.748C37.7801 130.235 39.8306 128.317 42.3882 126.994C47.8563 124.26 53.4125 122.209 59.057 120.842C64.7014 119.475 70.4341 118.792 76.2549 118.792C82.0757 118.792 87.8084 119.475 93.4528 120.842C99.0973 122.209 104.654 124.26 110.122 126.994C112.679 128.317 114.73 130.235 116.273 132.748C117.817 135.262 118.588 138.018 118.588 141.017V155.833H33.9216Z" fill="#F8B81D"/>
-            <path d="M76.7549 85L62.7549 77.4V65.4L54.7549 61L76.7549 49L98.7549 61V77H94.7549V63.2L90.7549 65.4V77.4L76.7549 85Z" fill="#F8B81D"/>
-          </g>
-        </svg>
-      </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mx-auto mt-1" data-aos="fade-up" data-aos-delay="600">
-        <div class="col-12 d-flex stat-wrap radius grants align-items-center justify-content-between px-2 h-100">
-          <div class="stat d-flex flex-column ms-3">
-            <div class="grants-odometer odometer-auto-theme" style="font-size: 30px; font-weight: bold; display: inline-block;">0</div>
-            <span class="fs-6 lust-light stat-label">Grants</span>
+      <div class="row gx-2 pb-2 justify-content-between">
+        <div class="col-lg-4 col-md-6 mb-1 mb-lg-0 mx-auto mt-1" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-12 d-flex stat-wrap radius contributions align-items-center justify-content-between ps-2 pe-2 py-2">
+            <div class="stat d-flex flex-column ms-3">
+              <div class="contribution-odometer odometer-auto-theme" style="font-size: 30px; font-weight: bold; display: inline-block;">0</div>
+              <span class="fs-6 lust-light stat-label">Contributions</span>
           </div>
-          <svg width="174" height="157" viewBox="0 0 174 157" fill="none" class="icon align-self-end" xmlns="http://www.w3.org/2000/svg">
-            <g id="face">
-              <circle id="eye-left" style="transform: scale(0)" cx="37" cy="18" r="3" fill="#F8B81D"/>
-              <circle id="eye-right" style="transform: scale(0)" cx="110" cy="18" r="3" fill="#F8B81D"/>
-              <path id="smile-left" d="M45 25C45 25 53.5 32 75.5 32" stroke="#F8B81D" stroke-width="4" stroke-linecap="round"/>
-              <path id="smile-right" d="M101 25C101 25 94 32 72 32" stroke="#F8B81D" stroke-width="4" stroke-linecap="round"/>
-            </g>
-            <g id="file-lines">
-              <path id="Vector 7" d="M13.5 43.5H131" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 9" d="M13.5 54H125" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 11" d="M13.5 64H128.5" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 13" d="M13.5 74H131" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 15" d="M13.5 84H124.5" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 17" d="M13.5 94H125" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 19" d="M13.5 104H128" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 21" d="M13.5 114H128" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 23" d="M13.5 124H126.5" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 25" d="M13.5 134H131" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 27" d="M13.5 144H126" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-              <path id="Vector 29" d="M13.5 154H131" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
-            </g>
-            <g id="badge">
-              <path id="badge-sash" d="M132 108V139L143.5 130.512L155 139V109.107" stroke="#F8B81D" stroke-width="5"/>
-              <path id="badge-emblem" d="M145 118.25L136.625 110H125V98.375L116.75 90L125 81.625V70H136.625L145 61.75L153.375 70H165V81.625L173.25 90L165 98.375V110H153.375L145 118.25ZM145 111.25L151.25 105H160V96.25L166.25 90L160 83.75V75H151.25L145 68.75L138.75 75H130V83.75L123.75 90L130 96.25V105H138.75L145 111.25Z" fill="#F8B81D"/>
-              <path id="badge-star" d="M145 96.1875L137.688 100.625L139.625 92.3125L133.125 86.6875L141.688 86L145 78.125L148.312 86L156.875 86.6875L150.375 92.3125L152.312 100.625L145 96.1875Z" fill="#F8B81D"/>
-            </g>
-              <path id="file-bg" d="M0 5C0 2.23857 2.23858 0 5 0H140C142.761 0 145 2.23858 145 5V157H0V5Z" fill="#F8B81D" fill-opacity="0.1"/>
+            <svg width="183" height="155" viewBox="0 0 183 155"  class="icon" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
+            <circle cx="28.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="49.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
+            <circle cx="70.5" cy="7.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="91.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="112.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
+            <circle cx="133.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="154.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="175.5" cy="7.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="7.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="28.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
+            <circle cx="49.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="70.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="91.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
+            <circle cx="112.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="133.5" cy="27.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="154.5" cy="27.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="175.5" cy="27.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="7.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
+            <circle cx="28.5" cy="47.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="49.5" cy="47.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="70.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="91.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="112.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="133.5" cy="47.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="154.5" cy="47.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="175.5" cy="47.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="7.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="28.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="49.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="70.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="91.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="112.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
+            <circle cx="133.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="154.5" cy="67.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="175.5" cy="67.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="7.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="28.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="49.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
+            <circle cx="70.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="91.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="112.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="133.5" cy="87.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="154.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="175.5" cy="87.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="7.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="28.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
+            <circle cx="49.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="70.5" cy="107.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="91.5" cy="107.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="112.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="133.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="154.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="175.5" cy="107.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="7.5" cy="127.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="28.5" cy="127.5" r="7.5" fill="#F8B81D"/>
+            <circle cx="49.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="70.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="91.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="112.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
+            <circle cx="133.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="154.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
+            <circle cx="175.5" cy="127.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="7.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="28.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="49.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="70.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.6"/>
+            <circle cx="91.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="112.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.1"/>
+            <circle cx="133.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.4"/>
+            <circle cx="154.5" cy="147.5" r="7.5" fill="#F8B81D" fill-opacity="0.3"/>
+            <circle cx="175.5" cy="147.5" r="7.5" fill="#F8B81D"/>
+          </svg>
+          </div>
+        </div>
 
+        <div class="col-lg-4 col-md-6 mb-1 mb-lg-0 mx-auto mt-1" data-aos="fade-up" data-aos-delay="350">
+          <div class="col-12 d-flex stat-wrap radius faculty align-items-center justify-content-between px-2 h-100">
+          <div class="stat d-flex flex-column ms-3">
+            <div class="faculty-odometer odometer-auto-theme" style="font-size: 30px; font-weight: bold; display: inline-block;">0</div>
+            <span class="fs-6 lust-light stat-label">Faculty</span>
+          </div>
+          <svg width="179" height="156" viewBox="0 0 179 156" fill="none" class="icon align-self-end" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.3" id="faculty-icon-1">
+              <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
+              <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
+              <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
+              <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
+            </g>
+            <g opacity="0.6" id="faculty-icon-2">
+              <path d="M148.87 78.6494C153.011 78.6494 157.089 79.135 161.104 80.1074C165.12 81.0799 169.073 82.5394 172.963 84.4844C174.782 85.4255 176.241 86.7902 177.339 88.5781C178.437 90.3661 178.985 92.3269 178.985 94.46V105H118.755V94.46C118.755 92.327 119.304 90.3661 120.401 88.5781C121.499 86.79 122.959 85.4255 124.778 84.4844C128.668 82.5395 132.62 81.0799 136.636 80.1074C140.651 79.135 144.729 78.6494 148.87 78.6494ZM164.876 37.5371V48.9189H162.03V39.1016L159.185 40.667V48.8799C159.292 48.9821 159.399 49.0864 159.505 49.1924C162.454 52.1412 163.928 55.6863 163.928 59.8271C163.928 63.9679 162.454 67.5132 159.505 70.4619C156.556 73.4106 153.011 74.8848 148.87 74.8848C144.729 74.8848 141.184 73.4106 138.235 70.4619C135.287 67.5132 133.813 63.9679 133.812 59.8271C133.812 55.6863 135.287 52.1412 138.235 49.1924C138.571 48.8566 138.915 48.5407 139.267 48.2432V40.667L133.575 37.5371L149.226 29L164.876 37.5371Z" fill="#F8B81D" fill-opacity="0.8"/>
+              <path d="M148.87 78.6494C153.011 78.6494 157.089 79.135 161.104 80.1074C165.12 81.0799 169.073 82.5394 172.963 84.4844C174.782 85.4255 176.241 86.7902 177.339 88.5781C178.437 90.3661 178.985 92.3269 178.985 94.46V105H118.755V94.46C118.755 92.327 119.304 90.3661 120.401 88.5781C121.499 86.79 122.959 85.4255 124.778 84.4844C128.668 82.5395 132.62 81.0799 136.636 80.1074C140.651 79.135 144.729 78.6494 148.87 78.6494ZM164.876 37.5371V48.9189H162.03V39.1016L159.185 40.667V48.8799C159.292 48.9821 159.399 49.0864 159.505 49.1924C162.454 52.1412 163.928 55.6863 163.928 59.8271C163.928 63.9679 162.454 67.5132 159.505 70.4619C156.556 73.4106 153.011 74.8848 148.87 74.8848C144.729 74.8848 141.184 73.4106 138.235 70.4619C135.287 67.5132 133.813 63.9679 133.812 59.8271C133.812 55.6863 135.287 52.1412 138.235 49.1924C138.571 48.8566 138.915 48.5407 139.267 48.2432V40.667L133.575 37.5371L149.226 29L164.876 37.5371Z" fill="#F8B81D" fill-opacity="0.8"/>
+              <path d="M148.87 78.6494C153.011 78.6494 157.089 79.135 161.104 80.1074C165.12 81.0799 169.073 82.5394 172.963 84.4844C174.782 85.4255 176.241 86.7902 177.339 88.5781C178.437 90.3661 178.985 92.3269 178.985 94.46V105H118.755V94.46C118.755 92.327 119.304 90.3661 120.401 88.5781C121.499 86.79 122.959 85.4255 124.778 84.4844C128.668 82.5395 132.62 81.0799 136.636 80.1074C140.651 79.135 144.729 78.6494 148.87 78.6494ZM164.876 37.5371V48.9189H162.03V39.1016L159.185 40.667V48.8799C159.292 48.9821 159.399 49.0864 159.505 49.1924C162.454 52.1412 163.928 55.6863 163.928 59.8271C163.928 63.9679 162.454 67.5132 159.505 70.4619C156.556 73.4106 153.011 74.8848 148.87 74.8848C144.729 74.8848 141.184 73.4106 138.235 70.4619C135.287 67.5132 133.813 63.9679 133.812 59.8271C133.812 55.6863 135.287 52.1412 138.235 49.1924C138.571 48.8566 138.915 48.5407 139.267 48.2432V40.667L133.575 37.5371L149.226 29L164.876 37.5371Z" fill="#F8B81D" fill-opacity="0.8"/>
+              <path d="M148.87 78.6494C153.011 78.6494 157.089 79.135 161.104 80.1074C165.12 81.0799 169.073 82.5394 172.963 84.4844C174.782 85.4255 176.241 86.7902 177.339 88.5781C178.437 90.3661 178.985 92.3269 178.985 94.46V105H118.755V94.46C118.755 92.327 119.304 90.3661 120.401 88.5781C121.499 86.79 122.959 85.4255 124.778 84.4844C128.668 82.5395 132.62 81.0799 136.636 80.1074C140.651 79.135 144.729 78.6494 148.87 78.6494ZM164.876 37.5371V48.9189H162.03V39.1016L159.185 40.667V48.8799C159.292 48.9821 159.399 49.0864 159.505 49.1924C162.454 52.1412 163.928 55.6863 163.928 59.8271C163.928 63.9679 162.454 67.5132 159.505 70.4619C156.556 73.4106 153.011 74.8848 148.87 74.8848C144.729 74.8848 141.184 73.4106 138.235 70.4619C135.287 67.5132 133.813 63.9679 133.812 59.8271C133.812 55.6863 135.287 52.1412 138.235 49.1924C138.571 48.8566 138.915 48.5407 139.267 48.2432V40.667L133.575 37.5371L149.226 29L164.876 37.5371Z" fill="#F8B81D" fill-opacity="0.8"/>
+            </g>
+            <g id="faculty-icon-3">
+              <path d="M61.3059 107.282C57.1608 103.137 55.0882 98.1542 55.0882 92.3334C55.0882 86.5125 57.1608 81.5295 61.3059 77.3844C65.4511 73.2393 70.4341 71.1667 76.2549 71.1667C82.0757 71.1667 87.0587 73.2393 91.2039 77.3844C95.349 81.5295 97.4216 86.5125 97.4216 92.3334C97.4216 98.1542 95.349 103.137 91.2039 107.282C87.0587 111.427 82.0757 113.5 76.2549 113.5C70.4341 113.5 65.4511 111.427 61.3059 107.282ZM33.9216 155.833V141.017C33.9216 138.018 34.6933 135.262 36.2367 132.748C37.7801 130.235 39.8306 128.317 42.3882 126.994C47.8563 124.26 53.4125 122.209 59.057 120.842C64.7014 119.475 70.4341 118.792 76.2549 118.792C82.0757 118.792 87.8084 119.475 93.4528 120.842C99.0973 122.209 104.654 124.26 110.122 126.994C112.679 128.317 114.73 130.235 116.273 132.748C117.817 135.262 118.588 138.018 118.588 141.017V155.833H33.9216Z" fill="#F8B81D"/>
+              <path d="M76.7549 85L62.7549 77.4V65.4L54.7549 61L76.7549 49L98.7549 61V77H94.7549V63.2L90.7549 65.4V77.4L76.7549 85Z" fill="#F8B81D"/>
+            </g>
           </svg>
         </div>
-      </div>
-    </div>
-
-  </section>
-  <section class="container mt-5">
-    <span class="text-start inter-light fs-5">02 Origins</span>
-    <div class="row mb-2">
-      <p class="w-100 fs-3 inter-light">
-      Reimagining <span class="inter-med">Research Discovery</span> at UConn with Lincus.</p>
-    </div>
-    <div class="row">
-      <p class="w-100 fs-5 inter-light mb-2">The concept behind <a target="_blank" href="https://lincus.uconn.edu/"><span class="yellow-shadow-sm">Lincus</span></a> originated with <a target="_blank" href="https://www.linkedin.com/in/dschwartz24"><span class="yellow-shadow-sm">Dan Schwartz</span></a>, who developed the original platform with undergraduate students in his lab in 2013. The early version of Lincus gained significant traction at University of Connecticut, reaching more than 4,000 student, faculty, and staff users. The platform was later spun out as a company and adopted by several Ivy League institutions on an annual contract basis. The company is no longer active, and the intellectual property has since returned to the University of Connecticut, where the platform has been redeveloped and is now maintained by the university.
-      </p>
-
-      <p class="w-100 fs-5 inter-light mb-0">Years later, recognizing the continued need for a modern research discovery platform, UConn Institutional Insights & Innovation (i3) relaunched Lincus as part of a broader effort to make faculty expertise across the university more visible, searchable, and up to date. As part of this initiative, i3 hired <a target="_blank" href="https://www.linkedin.com/in/magdalena-danielewicz"><span class="yellow-shadow-sm">Maggie Danielewicz</span></a>, a senior computer science student, to serve as the project’s lead developer and rebuild Lincus for long-term use by the UConn community.
-      </p>
-    </div>
-
-    <div class="row circles-row" data-aos="fade-in" data-aos-delay="800">
-      <svg width="100%" height="100%" viewBox="-40 0 1500 450" fill="none" xmlns="http://www.w3.org/2000/svg" id="circles-svg" style="overflow: visible;">      <!-- Left cluster -->
-      <path id="line-1-2" data-rel-circles="1-2" d="M60.5 90.5L202.5 223.5" stroke="#CED0D6" stroke-width="5"/>
-      <path id="line-1-3" data-rel-circles="1-3" d="M60.5 90.5L221.5 35.5" stroke="#CED0D6" stroke-width="4"/>
-      <path id="line-2-3" data-rel-circles="2-3" d="M202.5 223.5L221.5 35.5" stroke="#CED0D6" stroke-width="4"/>
-      <path id="line-2-4" data-rel-circles="2-4" d="M202.5 223.5L375 165" stroke="#CED0D6" stroke-width="6"/>
-
-      <!-- Center connections -->
-      <path id="line-4-5" data-rel-circles="4-5" d="M375 165L576.5 101.5" stroke="#CED0D6" stroke-width="13"/>
-      <path id="line-5-6" data-rel-circles="5-6" d="M576.5 101.5L799 106" stroke="#CED0D6" stroke-width="8"/>
-      <path id="line-5-7" data-rel-circles="5-7" d="M576.5 101.5L893 277" stroke="#CED0D6" stroke-width="8"/>
-
-      <!-- Right cluster -->
-      <path id="line-6-7" data-rel-circles="6-7" d="M799 106L893 277" stroke="#CED0D6" stroke-width="6"/>
-      <path id="line-6-8" data-rel-circles="6-8" d="M799 106L964.5 23.5" stroke="#CED0D6" stroke-width="5"/>
-      <path id="line-7-8" data-rel-circles="7-8" d="M893 277L964.5 23.5" stroke="#CED0D6" stroke-width="5"/>
-      <path id="line-7-9" data-rel-circles="7-9" d="M893 277L1088.5 183.5" stroke="#CED0D6" stroke-width="2"/>
-        <g id="circle-text-1">
-          <circle id="circle-1" cx="60.5" cy="90.5" r="15.5" fill="#60A7CD"/>
-          <text id="Lorem Ipsum_9" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="0" y="132.773">Faculty G</tspan></text>
-        </g>
-        <g id="circle-text-2">
-          <circle id="circle-2" cx="202.5" cy="223.5" r="23.5" fill="#5439CD"/>
-          <text id="Lorem Ipsum_8" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="142" y="271.773">Faculty H</tspan></text>
-        </g>
-        <g id="circle-text-3">
-          <circle id="circle-3" cx="221.5" cy="35.5" r="23.5" fill="#7A3389"/>
-          <text id="Lorem Ipsum_3" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="161" y="84.7727">Faculty I</tspan></text>
-        </g>
-        <g id="circle-text-4">
-          <circle id="circle-4" cx="375" cy="165" r="32" fill="#426902"/>
-          <text id="Lorem Ipsum_2" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="314" y="224.773">Faculty F</tspan></text>
-        </g>
-        <g id="circle-text-5">
-          <circle id="circle-5" cx="576.5" cy="101.5" r="82.5" fill="#50558C"/>
-          <text id="Lorem Ipsum" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="516" y="214.773">Faculty A</tspan></text>
-        </g>
-
-        <g id="circle-text-6">
-          <circle id="circle-6" cx="799" cy="106" r="59" fill="#A10F0F"/>
-          <text id="Lorem Ipsum_4" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="739" y="188.773">Faculty B</tspan></text>
-        </g>
-        <g id="circle-text-7">
-          <circle id="circle-7" cx="893" cy="277" r="37" fill="#86B9FF"/>
-          <text id="Lorem Ipsum_5" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="832" y="342.773">Faculty C</tspan></text>
-        </g>
-        <g id="circle-text-8">
-          <circle id="circle-8" cx="964.5" cy="23.5" r="23.5" fill="#D16DD7"/>
-          <text id="Lorem Ipsum_6" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="904" y="72.7727">Faculty D</tspan></text>
-        </g>
-        <g id="circle-text-9">
-          <circle id="circle-9" cx="1088.5" cy="183.5" r="15.5" fill="#F38415"/>
-          <text id="Lorem Ipsum_7" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="1028" y="222.773">Faculty E</tspan></text>
-        </g>
-      </svg>
-    </div>
-  </section>
-
-  <section class="container process mt-3">
-    <span class="text-start inter-light fs-5">03 Process</span>
-    <div class="row">
-      <span class="inter-light fs-3 mb-3">Start small. Learn fast. <span class="inter-med">Build what matters.</span></span>
-      <p class="w-100 fs-5 inter-light">
-At i3, we begin by putting something real in front of people. A rough draft, a working prototype, a first version you can click. From there we work closely with stakeholders to test ideas, gather feedback, and refine the system together. Because the work happens inside the university, we can respond quickly and shape the platform around the needs of the community rather than the constraints of a vendor product. The result is a solution that reflects how UConn actually works and evolves alongside it. Every project is different, but this approach helps us turn institutional challenges into tools that the university truly owns and can continue to improve over time.
-      </p>
-    </div>
-
-    <div class="process-row gx-3 row mt-3">
-
-
-      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
-        <div class="process-card-inner h-100 d-flex flex-column">
-          <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
-            <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
-            </svg>
-            <div class="z-2 arrow-bg bg-extralight-grey"></div>
-              <div class="process-content mt-auto">
-                <span class="z-2 lust-light fs-2 text-start mb-1">Research</span>
-                <span class="z-2 inter-light fs-5 text-start mb-0">Discover what matters. Understand users, challenges, and opportunities before diving in.</span>
-              </div>
-          </div>
-
-          <div class="process-card-back bg-white radius d-flex flex-column justify-content-end p-4">
-            <svg class=" card-arrow back arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
-            </svg>
-            <div class="z-2 arrow-bg bg-extralight-grey"></div>
-
-            <span class="z-2 inter-light text-start mb-0">We begin by meeting with stakeholders and mapping the problem together. For Lincus, this meant understanding how faculty expertise is described across university systems and how people actually search for collaborators and research topics.</span>
-          </div>
         </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
-        <div class="process-card-inner h-100 d-flex flex-column">
-          <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
-            <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+        <div class="col-lg-4 col-md-6 mx-auto mt-1" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-12 d-flex stat-wrap radius grants align-items-center justify-content-between px-2 h-100">
+            <div class="stat d-flex flex-column ms-3">
+              <div class="grants-odometer odometer-auto-theme" style="font-size: 30px; font-weight: bold; display: inline-block;">0</div>
+              <span class="fs-6 lust-light stat-label">Grants</span>
+            </div>
+            <svg width="174" height="157" viewBox="0 0 174 157" fill="none" class="icon align-self-end" xmlns="http://www.w3.org/2000/svg">
+              <g id="face">
+                <circle id="eye-left" style="transform: scale(0)" cx="37" cy="18" r="3" fill="#F8B81D"/>
+                <circle id="eye-right" style="transform: scale(0)" cx="110" cy="18" r="3" fill="#F8B81D"/>
+                <path id="smile-left" d="M45 25C45 25 53.5 32 75.5 32" stroke="#F8B81D" stroke-width="4" stroke-linecap="round"/>
+                <path id="smile-right" d="M101 25C101 25 94 32 72 32" stroke="#F8B81D" stroke-width="4" stroke-linecap="round"/>
+              </g>
+              <g id="file-lines">
+                <path id="Vector 7" d="M13.5 43.5H131" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 9" d="M13.5 54H125" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 11" d="M13.5 64H128.5" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 13" d="M13.5 74H131" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 15" d="M13.5 84H124.5" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 17" d="M13.5 94H125" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 19" d="M13.5 104H128" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 21" d="M13.5 114H128" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 23" d="M13.5 124H126.5" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 25" d="M13.5 134H131" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 27" d="M13.5 144H126" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                <path id="Vector 29" d="M13.5 154H131" stroke="#F8B81D" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+              </g>
+              <g id="badge">
+                <path id="badge-sash" d="M132 108V139L143.5 130.512L155 139V109.107" stroke="#F8B81D" stroke-width="5"/>
+                <path id="badge-emblem" d="M145 118.25L136.625 110H125V98.375L116.75 90L125 81.625V70H136.625L145 61.75L153.375 70H165V81.625L173.25 90L165 98.375V110H153.375L145 118.25ZM145 111.25L151.25 105H160V96.25L166.25 90L160 83.75V75H151.25L145 68.75L138.75 75H130V83.75L123.75 90L130 96.25V105H138.75L145 111.25Z" fill="#F8B81D"/>
+                <path id="badge-star" d="M145 96.1875L137.688 100.625L139.625 92.3125L133.125 86.6875L141.688 86L145 78.125L148.312 86L156.875 86.6875L150.375 92.3125L152.312 100.625L145 96.1875Z" fill="#F8B81D"/>
+              </g>
+                <path id="file-bg" d="M0 5C0 2.23857 2.23858 0 5 0H140C142.761 0 145 2.23858 145 5V157H0V5Z" fill="#F8B81D" fill-opacity="0.1"/>
+
             </svg>
-            <div class="z-2 arrow-bg bg-extralight-grey"></div>
-              <div class="process-content mt-auto">
-                <span class="z-2 lust-light fs-2 text-start mb-1">Prototype</span>
-                <span class="z-2 inter-light fs-5 text-start mb-0">Make it tangible. Turn ideas into something you can click, touch, or explore.</span>
-              </div>
-          </div>
-
-          <div class="process-card-back bg-white radius d-flex flex-column justify-content-end p-4">
-            <svg class=" card-arrow back arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
-            </svg>
-            <div class="z-2 arrow-bg bg-extralight-grey"></div>
-
-            <span class="z-2 inter-light text-start mb-0">We quickly built an early version of the platform so stakeholders could see how faculty profiles, publications, and connections might come together. A prototype helps everyone react to something concrete rather than abstract ideas.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
-        <div class="process-card-inner h-100 d-flex flex-column">
-          <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
-            <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
-            </svg>
-            <div class="z-2 arrow-bg bg-extralight-grey"></div>
-              <div class="process-content mt-auto">
-                <span class="z-2 lust-light fs-2 text-start mb-1">Test</span>
-                <span class="z-2 inter-light fs-5 text-start mb-0">Try, learn, refine. Gather feedback early, spot issues, and see what really works before moving forward.</span>
-              </div>
-          </div>
-
-          <div class="process-card-back bg-white radius d-flex flex-column justify-content-end p-4">
-            <svg class=" card-arrow back arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
-            </svg>
-            <div class="z-2 arrow-bg bg-extralight-grey"></div>
-
-            <span class="z-2 inter-light text-start mb-0">As stakeholders and early users explored the system, their feedback shaped how Lincus evolved. Search behavior, profile information, and collaboration signals were refined through real use.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
-        <div class="process-card-inner h-100 d-flex flex-column">
-          <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
-            <svg class="card-arrow  arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
-            </svg>
-            <div class="z-2 arrow-bg bg-extralight-grey"></div>
-              <div class="process-content mt-auto">
-                <span class="z-2 lust-light fs-2 text-start mb-1">Deploy</span>
-                <span class="z-2 inter-light fs-5 text-start mb-0">Launch with confidence. Deliver a working solution while staying flexible for improvements.</span>
-              </div>
-          </div>
-
-          <div class="process-card-back bg-white radius d-flex flex-column justify-content-end p-4">
-            <svg class=" card-arrow back arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
-            </svg>
-            <div class="z-2 arrow-bg bg-extralight-grey"></div>
-
-            <span class="z-2 inter-light text-start mb-0">Once the platform was ready, Lincus was launched to the community. From there, real usage continues to guide improvements so the system grows alongside the university’s research ecosystem.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="container-fluid mt-5 bg-midnight py-5 rounded-top-4">
-    <div class="container challenge text-white my-4 pb-5">
-      <span class="text-start inter-light fs-5">04 The Challenge</span>
+  <!-- Origins -->
+  <section>
+    <div class="container mt-5">
+      <span class="text-start inter-light fs-5">02 Origins</span>
+      <div class="row mb-2">
+        <p class="w-100 fs-3 inter-light">
+        Reimagining <span class="inter-med">Research Discovery</span> at UConn with Lincus.</p>
+      </div>
       <div class="row">
-        <span class="inter-light fs-3 mb-3">An <span class="inter-med">underutilized tool</span> with outdated infrastructure.</span>
-        <p class="w-100 fs-5 inter-light">Prior to its redevelopment, Lincus already existed as a research discovery tool—but it had significant limitations. For example, the website was difficult to navigate and users had little insight into a professor’s full academic profile beyond basic directory-style information. 
+        <p class="w-100 fs-5 inter-light mb-2">The concept behind <a target="_blank" href="https://lincus.uconn.edu/"><span class="yellow-shadow-sm">Lincus</span></a> originated with <a target="_blank" href="https://www.linkedin.com/in/dschwartz24"><span class="yellow-shadow-sm">Dan Schwartz</span></a>, who developed the original platform with undergraduate students in his lab in 2013. The early version of Lincus gained significant traction at University of Connecticut, reaching more than 4,000 student, faculty, and staff users. The platform was later spun out as a company and adopted by several Ivy League institutions on an annual contract basis. The company is no longer active, and the intellectual property has since returned to the University of Connecticut, where the platform has been redeveloped and is now maintained by the university.
+        </p>
+
+        <p class="w-100 fs-5 inter-light mb-0">Years later, recognizing the continued need for a modern research discovery platform, UConn Institutional Insights & Innovation (i3) relaunched Lincus as part of a broader effort to make faculty expertise across the university more visible, searchable, and up to date. As part of this initiative, i3 hired <a target="_blank" href="https://www.linkedin.com/in/magdalena-danielewicz"><span class="yellow-shadow-sm">Maggie Danielewicz</span></a>, a senior computer science student, to serve as the project’s lead developer and rebuild Lincus for long-term use by the UConn community.
         </p>
       </div>
 
-      <div class="row px-5 pt-4 pb-5 d-flex align-items-stretch">
-        <div class="col-lg-6 mt-2 d-flex">
-          <div class="col-12 ms-auto radius challenge-card left py-5 px-5 d-flex flex-column" data-aos="fade-right">
-            <span class="fs-2 lust-light mb-2">Problem</span>
-              <ul class="fs-5 inter-light mb-0">
-                <li>Difficult to navigate the site</li>
-                <li>Limited insight into professors’ full research profiles</li>
-                <li>Expertise across departments was hard to discover</li>
-                <li>Fragmented access for students, faculty, and external users</li>
-              </ul>
-          </div>
+      <div class="row circles-row" data-aos="fade-in" data-aos-delay="800">
+        <svg width="100%" height="100%" viewBox="-40 0 1500 450" fill="none" xmlns="http://www.w3.org/2000/svg" id="circles-svg" style="overflow: visible;">      <!-- Left cluster -->
+        <path id="line-1-2" data-rel-circles="1-2" d="M60.5 90.5L202.5 223.5" stroke="#CED0D6" stroke-width="5"/>
+        <path id="line-1-3" data-rel-circles="1-3" d="M60.5 90.5L221.5 35.5" stroke="#CED0D6" stroke-width="4"/>
+        <path id="line-2-3" data-rel-circles="2-3" d="M202.5 223.5L221.5 35.5" stroke="#CED0D6" stroke-width="4"/>
+        <path id="line-2-4" data-rel-circles="2-4" d="M202.5 223.5L375 165" stroke="#CED0D6" stroke-width="6"/>
 
+        <!-- Center connections -->
+        <path id="line-4-5" data-rel-circles="4-5" d="M375 165L576.5 101.5" stroke="#CED0D6" stroke-width="13"/>
+        <path id="line-5-6" data-rel-circles="5-6" d="M576.5 101.5L799 106" stroke="#CED0D6" stroke-width="8"/>
+        <path id="line-5-7" data-rel-circles="5-7" d="M576.5 101.5L893 277" stroke="#CED0D6" stroke-width="8"/>
 
-        </div>
+        <!-- Right cluster -->
+        <path id="line-6-7" data-rel-circles="6-7" d="M799 106L893 277" stroke="#CED0D6" stroke-width="6"/>
+        <path id="line-6-8" data-rel-circles="6-8" d="M799 106L964.5 23.5" stroke="#CED0D6" stroke-width="5"/>
+        <path id="line-7-8" data-rel-circles="7-8" d="M893 277L964.5 23.5" stroke="#CED0D6" stroke-width="5"/>
+        <path id="line-7-9" data-rel-circles="7-9" d="M893 277L1088.5 183.5" stroke="#CED0D6" stroke-width="2"/>
+          <g id="circle-text-1">
+            <circle id="circle-1" cx="60.5" cy="90.5" r="15.5" fill="#60A7CD"/>
+            <text id="Lorem Ipsum_9" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="0" y="132.773">Faculty G</tspan></text>
+          </g>
+          <g id="circle-text-2">
+            <circle id="circle-2" cx="202.5" cy="223.5" r="23.5" fill="#5439CD"/>
+            <text id="Lorem Ipsum_8" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="142" y="271.773">Faculty H</tspan></text>
+          </g>
+          <g id="circle-text-3">
+            <circle id="circle-3" cx="221.5" cy="35.5" r="23.5" fill="#7A3389"/>
+            <text id="Lorem Ipsum_3" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="161" y="84.7727">Faculty I</tspan></text>
+          </g>
+          <g id="circle-text-4">
+            <circle id="circle-4" cx="375" cy="165" r="32" fill="#426902"/>
+            <text id="Lorem Ipsum_2" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="314" y="224.773">Faculty F</tspan></text>
+          </g>
+          <g id="circle-text-5">
+            <circle id="circle-5" cx="576.5" cy="101.5" r="82.5" fill="#50558C"/>
+            <text id="Lorem Ipsum" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="516" y="214.773">Faculty A</tspan></text>
+          </g>
 
-
-        <div class="col-lg-6 mt-2 d-flex">
-          <div class="col-12 me-auto radius challenge-card py-5 px-5 d-flex flex-column" data-aos="fade-left">
-            <span class="fs-2 lust-light mb-2 z-2">Solution</span>
-              <ul class="fs-5 inter-light mb-0">
-                <li>Redesigned Lincus for intuitive, user-friendly navigation</li>
-                <li>Centralized and enriched research profiles with new data sources</li>
-                <li>Scalable platform for discovering expertise across disciplines</li>
-                <li>Supports students, faculty, and external users in exploring research</li>
-              </ul>
-          </div>
-        </div>
+          <g id="circle-text-6">
+            <circle id="circle-6" cx="799" cy="106" r="59" fill="#A10F0F"/>
+            <text id="Lorem Ipsum_4" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="739" y="188.773">Faculty B</tspan></text>
+          </g>
+          <g id="circle-text-7">
+            <circle id="circle-7" cx="893" cy="277" r="37" fill="#86B9FF"/>
+            <text id="Lorem Ipsum_5" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="832" y="342.773">Faculty C</tspan></text>
+          </g>
+          <g id="circle-text-8">
+            <circle id="circle-8" cx="964.5" cy="23.5" r="23.5" fill="#D16DD7"/>
+            <text id="Lorem Ipsum_6" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="904" y="72.7727">Faculty D</tspan></text>
+          </g>
+          <g id="circle-text-9">
+            <circle id="circle-9" cx="1088.5" cy="183.5" r="15.5" fill="#F38415"/>
+            <text id="Lorem Ipsum_7" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" font-weight="300" letter-spacing="0em"><tspan x="1028" y="222.773">Faculty E</tspan></text>
+          </g>
+        </svg>
       </div>
-
-      <p class="fs-5 inter-light mb-0">These shortcomings limited Lincus’s usefulness for students, faculty, and external users alike. Without a reliable, centralized way to explore research expertise, the university lacked a scalable solution for surfacing the work happening across departments and disciplines. Recognizing this need, Institutional Insights & Innovation identified Lincus as a high-impact opportunity to improve research visibility and knowledge discovery across UConn. They aimed to rebuild Lincus to match new development standards, take advantage of new data sources, and align it to university sustainability goals. 
-      </p>
     </div>
   </section>
 
-  <section class="container-fluid overflow-hidden vision-wrap bg-yellow pt-5 rounded-4 position-relative">
+  <!-- Process -->
+  <section>
+    <div class="container process mt-3">
+      <span class="text-start inter-light fs-5">03 Process</span>
+      <div class="row">
+        <span class="inter-light fs-3 mb-3">Start small. Learn fast. <span class="inter-med">Build what matters.</span></span>
+        <p class="w-100 fs-5 inter-light">
+  At i3, we begin by putting something real in front of people. A rough draft, a working prototype, a first version you can click. From there we work closely with stakeholders to test ideas, gather feedback, and refine the system together. Because the work happens inside the university, we can respond quickly and shape the platform around the needs of the community rather than the constraints of a vendor product. The result is a solution that reflects how UConn actually works and evolves alongside it. Every project is different, but this approach helps us turn institutional challenges into tools that the university truly owns and can continue to improve over time.
+        </p>
+      </div>
+
+      <div class="process-row gx-3 row mt-3">
+
+
+        <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
+          <div class="process-card-inner h-100 d-flex flex-column">
+            <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
+              <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+              </svg>
+              <div class="z-2 arrow-bg bg-extralight-grey"></div>
+                <div class="process-content mt-auto">
+                  <span class="z-2 lust-light fs-2 text-start mb-1">Research</span>
+                  <span class="z-2 inter-light fs-5 text-start mb-0">Discover what matters. Understand users, challenges, and opportunities before diving in.</span>
+                </div>
+            </div>
+
+            <div class="process-card-back bg-white radius d-flex flex-column justify-content-end p-4">
+              <svg class=" card-arrow back arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+              </svg>
+              <div class="z-2 arrow-bg bg-extralight-grey"></div>
+
+              <span class="z-2 inter-light text-start mb-0">We begin by meeting with stakeholders and mapping the problem together. For Lincus, this meant understanding how faculty expertise is described across university systems and how people actually search for collaborators and research topics.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
+          <div class="process-card-inner h-100 d-flex flex-column">
+            <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
+              <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+              </svg>
+              <div class="z-2 arrow-bg bg-extralight-grey"></div>
+                <div class="process-content mt-auto">
+                  <span class="z-2 lust-light fs-2 text-start mb-1">Prototype</span>
+                  <span class="z-2 inter-light fs-5 text-start mb-0">Make it tangible. Turn ideas into something you can click, touch, or explore.</span>
+                </div>
+            </div>
+
+            <div class="process-card-back bg-white radius d-flex flex-column justify-content-end p-4">
+              <svg class=" card-arrow back arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+              </svg>
+              <div class="z-2 arrow-bg bg-extralight-grey"></div>
+
+              <span class="z-2 inter-light text-start mb-0">We quickly built an early version of the platform so stakeholders could see how faculty profiles, publications, and connections might come together. A prototype helps everyone react to something concrete rather than abstract ideas.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
+          <div class="process-card-inner h-100 d-flex flex-column">
+            <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
+              <svg class=" card-arrow arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+              </svg>
+              <div class="z-2 arrow-bg bg-extralight-grey"></div>
+                <div class="process-content mt-auto">
+                  <span class="z-2 lust-light fs-2 text-start mb-1">Test</span>
+                  <span class="z-2 inter-light fs-5 text-start mb-0">Try, learn, refine. Gather feedback early, spot issues, and see what really works before moving forward.</span>
+                </div>
+            </div>
+
+            <div class="process-card-back bg-white radius d-flex flex-column justify-content-end p-4">
+              <svg class=" card-arrow back arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+              </svg>
+              <div class="z-2 arrow-bg bg-extralight-grey"></div>
+
+              <span class="z-2 inter-light text-start mb-0">As stakeholders and early users explored the system, their feedback shaped how Lincus evolved. Search behavior, profile information, and collaboration signals were refined through real use.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12 mt-2 process-card bg-transparent" data-aos="zoom-out-down" tabindex="0" role="button" aria-pressed="false">
+          <div class="process-card-inner h-100 d-flex flex-column">
+            <div class="process-card-front bg-off-white radius d-flex flex-column p-4">
+              <svg class="card-arrow  arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+              </svg>
+              <div class="z-2 arrow-bg bg-extralight-grey"></div>
+                <div class="process-content mt-auto">
+                  <span class="z-2 lust-light fs-2 text-start mb-1">Deploy</span>
+                  <span class="z-2 inter-light fs-5 text-start mb-0">Launch with confidence. Deliver a working solution while staying flexible for improvements.</span>
+                </div>
+            </div>
+
+            <div class="process-card-back bg-white radius d-flex flex-column justify-content-end p-4">
+              <svg class=" card-arrow back arrow-bounce z-3" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.74204 16.9442L9.74204 -5.47506e-07L12.5255 -4.25838e-07L12.5255 16.9442L20.3191 9.15056L22.2675 11.1338L11.1338 22.2675L-4.30137e-06 11.1338L1.9484 9.15056L9.74204 16.9442Z" fill="#000E2F"/>
+              </svg>
+              <div class="z-2 arrow-bg bg-extralight-grey"></div>
+
+              <span class="z-2 inter-light text-start mb-0">Once the platform was ready, Lincus was launched to the community. From there, real usage continues to guide improvements so the system grows alongside the university’s research ecosystem.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenge -->
+  <section>
+    <div class="container-fluid mt-5 bg-midnight py-5 rounded-top-4">
+      <div class="container challenge text-white my-4 pb-5">
+        <span class="text-start inter-light fs-5">04 The Challenge</span>
+        <div class="row">
+          <span class="inter-light fs-3 mb-3">An <span class="inter-med">underutilized tool</span> with outdated infrastructure.</span>
+          <p class="w-100 fs-5 inter-light">Prior to its redevelopment, Lincus already existed as a research discovery tool—but it had significant limitations. For example, the website was difficult to navigate and users had little insight into a professor’s full academic profile beyond basic directory-style information.
+          </p>
+        </div>
+
+        <div class="row px-md-4 px-lg-5 pt-4 pb-5 d-flex align-items-stretch">
+          <div class="col-lg-6 mt-2 d-flex mb-3 mb-md-0">
+            <div class="col-12 ms-auto radius challenge-card left py-5 px-5 d-flex flex-column" data-aos="fade-right">
+              <span class="fs-2 lust-light mb-2">Problem</span>
+                <ul class="fs-5 inter-light mb-0">
+                  <li>Difficult to navigate the site</li>
+                  <li>Limited insight into professors’ full research profiles</li>
+                  <li>Expertise across departments was hard to discover</li>
+                  <li>Fragmented access for students, faculty, and external users</li>
+                </ul>
+            </div>
+
+
+          </div>
+
+
+          <div class="col-lg-6 mt-2 d-flex">
+            <div class="col-12 me-auto radius challenge-card py-5 px-5 d-flex flex-column" data-aos="fade-left">
+              <span class="fs-2 lust-light mb-2 z-2">Solution</span>
+                <ul class="fs-5 inter-light mb-0">
+                  <li>Redesigned Lincus for intuitive, user-friendly navigation</li>
+                  <li>Centralized and enriched research profiles with new data sources</li>
+                  <li>Scalable platform for discovering expertise across disciplines</li>
+                  <li>Supports students, faculty, and external users in exploring research</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="fs-5 inter-light mb-0">These shortcomings limited Lincus’s usefulness for students, faculty, and external users alike. Without a reliable, centralized way to explore research expertise, the university lacked a scalable solution for surfacing the work happening across departments and disciplines. Recognizing this need, Institutional Insights & Innovation identified Lincus as a high-impact opportunity to improve research visibility and knowledge discovery across UConn. They aimed to rebuild Lincus to match new development standards, take advantage of new data sources, and align it to university sustainability goals.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Vision -->
+<section>
+  <div class="container-fluid overflow-hidden vision-wrap bg-yellow pt-5 z-1 rounded-4 position-relative">
     <img class="vision-dots left" src="assets/vision-dots.svg" alt="">
     <img class="vision-dots right" src="assets/vision-dots.svg" alt="">
-    <div class="container vision text-black my-4">
+
+    <div class="container vision text-black mt-4 mb-0 mb-xxl-4">
       <span class="text-start inter-light fs-5">05 The Vision</span>
+
       <div class="row">
         <span class="inter-light fs-3 mb-3">A <span class="inter-med">centralized</span>, living source of academic expertise.</span>
         <p class="w-100 fs-5 inter-light">
-          Under i3’s leadership, the new version of Lincus was designed to be both technically sustainable and institutionally integrated. This approach aligns with i3’s broader mission: building internal tools that reduce duplication, improve data quality, and make institutional knowledge more accessible. Lincus not only serves students and external audiences searching for experts—it also provides a clear incentive for faculty to keep their Interfolio records accurate, knowing that this information feeds directly into a public-facing platform. 
+          Under i3’s leadership, the new version of Lincus was designed to be both technically sustainable and institutionally integrated. This approach aligns with i3’s broader mission: building internal tools that reduce duplication, improve data quality, and make institutional knowledge more accessible. Lincus not only serves students and external audiences searching for experts—it also provides a clear incentive for faculty to keep their Interfolio records accurate, knowing that this information feeds directly into a public-facing platform.
         </p>
       </div>
+      <div class="row mt-3 pt-xl-5 mb-0 mb-xxl-4 pb-0 pb-xxl-4 justify-content-start position-relative vision-stage">
 
-      <div class="row mt-3 pt-5 justify-content-end position-relative">
-        <img src="assets/lincus-mockup.png" alt="Lincus Profile" class="vision-img mt-5 z-1">
+        <img
+          src="assets/lincus-mockup.png"
+          alt="Lincus Profile"
+          class="vision-img mt-xl-5 mx-auto me-xl-0 order-2 order-xl-1"
+        >
 
+        <div class="col-12 col-xl-7 vision-cards z-3 order-1 order-xl-0">
+          <div class="row justify-content-center justify-content-xl-start">
 
-        <div class="col-7 position-absolute vision-cards z-2">
-          <div class="row">
-            <div class="col-4 ps-2">
-              <div class="col-12 vision-card position-relative radius overflow-hidden d-flex p-3 flex-column">
-                <span class="card-num fs-6 inter-med text-white position-relative mt-2 ms-2 mb-2 z-1">1</span>
-                <span class="fs-5 lust-light">Interfolio</span>
-                <p class="inter-light fs-6 mb-3">Primary source for faculty profiles. Manages academic and professional details, ensuring your core information is accurate and up to date.</p>
+            <!-- CARD 1 -->
+            <div class="col-12 col-md-11 col-xl-4 ps-2 mb-2 mb-xl-0">
+              <div class="vision-card-wrap position-relative">
+                <svg
+                  width="765"
+                  height="131"
+                  viewBox="0 0 765 131"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="vision-dash dash-1 d-none d-xxl-block"
+                >
+                  <path
+                    d="M1.83829 0.787842C39.3383 88.2878 263.838 206.788 763.838 56.7878"
+                    stroke="url(#paint0_linear_66_499)"
+                    stroke-width="2"
+                    stroke-dasharray="8 8"
+                    class="dash"
+                  />
+                  <path
+                    d="M1.83829 0.787842C39.3383 88.2878 263.838 206.788 763.838 56.7878"
+                    stroke="#F8B81D"
+                    stroke-width="4"
+                    class="cover"
+                  />
+                  <defs>
+                    <linearGradient id="paint0_linear_66_499" x1="1.83829" y1="38.2878" x2="698.838" y2="38.2878" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="white" />
+                      <stop offset="1" stop-color="white" stop-opacity="0.2" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                <div class="col-12 vision-card position-relative radius overflow-visible d-flex p-3 flex-column">
+                  <span class="card-num fs-6 inter-med text-white position-relative mt-2 ms-2 mb-2 z-1">1</span>
+                  <span class="fs-5 ps-4 ms-2 ms-xl-0 ps-xl-0 lust-light">Interfolio</span>
+                  <p class="inter-light fs-6 mb-3">
+                    Primary source for faculty profiles. Manages academic and professional details, ensuring your core information is accurate and up to date.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="col-4 ps-2 ">
-              <div class="col-12 vision-card position-relative radius overflow-hidden d-flex p-3 flex-column">
-                <span class="card-num fs-6 inter-med text-white position-relative mt-2 ms-2 mb-2 z-1">2</span>
-                <span class="fs-5 lust-light">Scopus</span>
-                <p class="inter-light fs-6 mb-3">Provides publications and co-author connections. Automatically enriches profiles with verified research outputs.</p>
+
+            <!-- CARD 2 -->
+            <div class="col-12 col-md-11 col-xl-4 ps-2 mb-2 mb-xl-0">
+              <div class="vision-card-wrap position-relative">
+                <svg
+                  width="479"
+                  height="99"
+                  viewBox="0 0 479 99"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="vision-dash dash-2 d-none d-xxl-block"
+                >
+                  <path
+                    d="M1.94597 0.46167C22.946 88.9617 222.446 119.462 477.946 79.4617"
+                    stroke="url(#paint0_linear_66_503)"
+                    stroke-width="2"
+                    stroke-dasharray="8 8"
+                    class="dash"
+                  />
+                  <path
+                    d="M1.94597 0.46167C22.946 88.9617 222.446 119.462 477.946 79.4617"
+                    stroke="#F8B81D"
+                    stroke-width="4"
+                    class="cover"
+                  />
+                  <defs>
+                    <linearGradient id="paint0_linear_66_503" x1="1.94597" y1="64.2117" x2="156.446" y2="64.2117" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="white" />
+                      <stop offset="1" stop-color="white" stop-opacity="0.2" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                <div class="col-12 vision-card position-relative radius overflow-visible d-flex p-3 flex-column">
+                  <span class="card-num fs-6 inter-med text-white position-relative mt-2 ms-2 mb-2 z-1">2</span>
+                  <span class="fs-5 ps-4 ps-xl-0 ms-2 ms-xl-0 lust-light">Scopus</span>
+                  <p class="inter-light fs-6 mb-3">
+                    Provides publications and co-author connections. Automatically enriches profiles with verified research outputs.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="col-4 ps-2 ">
-              <div class="col-12 vision-card position-relative radius overflow-hidden d-flex p-3 flex-column" style="backdrop-filter: blur(15px)">
-                <span class="card-num fs-6 inter-med text-white position-relative mt-2 ms-2 mb-2 z-1">3</span>
-                <span class="fs-5 lust-light">Manual Entry</span>
-                <p class="inter-light fs-6 mb-3">Allows adjustments and additions not captured elsewhere. Add Scopus IDs, correct details, and ensure your profile fully reflects your work.</p>
+
+            <!-- CARD 3 -->
+            <div class="col-12 col-md-11 col-xl-4 mb-2 mb-xl-0 ps-2">
+              <div class="vision-card-wrap position-relative">
+                <svg
+                  width="311"
+                  height="77"
+                  viewBox="0 0 311 77"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="vision-dash dash-3 d-none d-xxl-block"
+                >
+                  <path
+                    d="M2 0C2 51 116.5 102.5 310.5 57.5"
+                    stroke="url(#paint0_linear_66_506)"
+                    stroke-width="2"
+                    stroke-dasharray="8 8"
+                    class="dash"
+                  />
+                  <path
+                    d="M2 0C2 51 116.5 102.5 310.5 57.5"
+                    stroke="#F8B81D"
+                    stroke-width="4"
+                    class="cover"
+                  />
+                  <defs>
+                    <linearGradient id="paint0_linear_66_506" x1="-14.5" y1="16" x2="80.5" y2="94" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="white" />
+                      <stop offset="1" stop-color="white" stop-opacity="0.1" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                <div class="col-12 vision-card position-relative radius overflow-visible d-flex p-3 flex-column" style="backdrop-filter: blur(15px)">
+                  <span class="card-num fs-6 inter-med text-white position-relative mt-2 ms-2 mb-2 z-1">3</span>
+                  <span class="fs-5 lust-light ps-4 ps-xl-0 ms-2 ms-xl-0">Manual Entry</span>
+                  <p class="inter-light fs-6 mb-3">
+                    Allows adjustments and additions not captured elsewhere. Add Scopus IDs, correct details, and ensure your profile fully reflects your work.
+                  </p>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
 
-        <svg width="765" height="131" viewBox="0 0 765 131" fill="none" xmlns="http://www.w3.org/2000/svg" class="vision-dash">
-          <path d="M1.83829 0.787842C39.3383 88.2878 263.838 206.788 763.838 56.7878" stroke="url(#paint0_linear_66_499)" stroke-width="2" stroke-dasharray="8 8" class="dash"/>
-          <path d="M1.83829 0.787842C39.3383 88.2878 263.838 206.788 763.838 56.7878" stroke="#F8B81D" stroke-width="4" class="cover"/>
-          <defs>
-            <linearGradient id="paint0_linear_66_499" x1="1.83829" y1="38.2878" x2="698.838" y2="38.2878" gradientUnits="userSpaceOnUse">
-              <stop stop-color="white"/>
-              <stop offset="1" stop-color="white" stop-opacity="0.2"/>
-            </linearGradient>
-          </defs>
-        </svg>
-
-
-
-
-        <svg width="479" height="99" viewBox="0 0 479 99" fill="none" xmlns="http://www.w3.org/2000/svg" class="vision-dash">
-          <path d="M1.94597 0.46167C22.946 88.9617 222.446 119.462 477.946 79.4617" stroke="url(#paint0_linear_66_503)" stroke-width="2" stroke-dasharray="8 8" class="dash"/>
-          <path d="M1.94597 0.46167C22.946 88.9617 222.446 119.462 477.946 79.4617" stroke="#F8B81D" stroke-width="4" class="cover"/>
-          <defs>
-            <linearGradient id="paint0_linear_66_503" x1="1.94597" y1="64.2117" x2="156.446" y2="64.2117" gradientUnits="userSpaceOnUse">
-              <stop stop-color="white"/>
-              <stop offset="1" stop-color="white" stop-opacity="0.4"/>
-            </linearGradient>
-          </defs>
-        </svg>
-
-
-        <svg width="311" height="77" viewBox="0 0 311 77" fill="none" xmlns="http://www.w3.org/2000/svg" class="vision-dash">
-          <path d="M2 0C2 51 116.5 102.5 310.5 57.5" stroke="url(#paint0_linear_66_506)" stroke-width="2" stroke-dasharray="8 8" class="dash"/>
-          <path d="M2 0C2 51 116.5 102.5 310.5 57.5" stroke="#F8B81D" stroke-width="4" class="cover"/>
-          <defs>
-            <linearGradient id="paint0_linear_66_506" x1="-14.5" y1="16" x2="80.5" y2="94" gradientUnits="userSpaceOnUse">
-              <stop stop-color="white"/>
-              <stop offset="1" stop-color="white" stop-opacity="0.1"/>
-            </linearGradient>
-        </defs>
-        </svg>
       </div>
     </div>
-  </section>
-
-  <section class="container-fluid build-wrap text-white bg-midnight pt-5 rounded-bottom-4 position-relative">
-    <div class="container build-head my-4">
-      <span class="text-start inter-light fs-5">06 The Build</span>
-      <div class="row">
-        <span class="inter-light fs-3 mb-3">Technical scale and <span class="inter-med">institutional</span>, complexity.</span>
-      </div>
-    </div>
-
-    <div class="row build-row-1">
-      <div class="col-lg-6 ps-0">
-        <img class="img-fluid w-100" src="assets/lincus-action.png" alt="Laptop on table with lincus open">
-      </div>
-      <div class="col-lg-6 d-flex align-items-center justify-content-center">
-        <div class="container mt-lg-0 mt-5 mb-lg-5">
-        <p class="fs-5 inter-light mb-0">
-          As the sole developer on the project, Maggie worked closely within the i3 ecosystem
-          to translate this vision into a functional system. Over the course of a year, she designed
-          the database architecture, built complex data relationships, and managed the integration of over
-          120,000 research contributions such as publications, grants, and records.
-        </p>
+  </div>
+</section>
+  <!-- Build -->
+  <section>
+    <div class="container-fluid build-wrap text-white bg-midnight pt-5 rounded-bottom-4 position-relative">
+      <div class="container build-head my-4">
+        <span class="text-start inter-light fs-5">06 The Build</span>
+        <div class="row">
+          <span class="inter-light fs-3 mb-3">Technical scale and <span class="inter-med">institutional</span>, complexity.</span>
         </div>
       </div>
-    </div>
 
-    <div class="container build-row-2">
-      <div class="row">
-        <div class="col-lg-5 d-flex align-items-center justify-content-start">
-          <p class="fs-5 inter-light mb-lg-0 mb-4">
-            <br />
-            The project required balancing technical complexity with usability—ensuring the
-            platform could handle large volumes of interconnected data while still delivering a clean,
-            modern user experience. For i3, this work exemplified how targeted internal development
-            can modernize legacy systems without relying on external vendors.
+      <div class="row build-row-1">
+        <div class="col-lg-6 ps-0">
+          <img class="img-fluid w-100" src="assets/lincus-action.png" alt="Laptop on table with lincus open">
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <div class="container mt-lg-0 mt-5 mb-lg-5">
+          <p class="fs-5 inter-light mb-0">
+            As the sole developer on the project, Maggie worked closely within the i3 ecosystem
+            to translate this vision into a functional system. Over the course of a year, she designed
+            the database architecture, built complex data relationships, and managed the integration of over
+            120,000 research contributions such as publications, grants, and records.
           </p>
-      </div>
-        <div class="col-lg-7">
-          <div class="mac-header bg-white justify-content-start align-items-center gap-2 d-flex ps-3 py-2 rounded-top-3">
-            <div class="mac-circle red"></div>
-            <div class="mac-circle yellow"></div>
-            <div class="mac-circle green"></div>
           </div>
-          <div class="mac-editor text-light-grey fs-6 py-4 px-3 d-flex flex-column gap-5">
-            <div class="line-group d-flex flex-column align-items-start">
-              <span class="editor-line tab-0" style="color: #aaaaaa">// Single faculty profile page</span>
-              <span class="editor-line tab-0"><span style="color: #84D3EC">public function</span> show(Request <span style="color: #FF6179">$request</span>, <span style="color: #FF6179">$slug</span>, <span style="color: #FF6179">$tab</span> = <span style="color: #C9E590">'show'</span>){</span>
-              <span class="editor-line tab-1"><span style="color: #FF6179">$person</span> = <span style="color: #FF6179">$this</span>->loadPersonAndRelationships(<span style="color: #FF6179">$slug</span>);</span>
-              <span class="editor-line tab-1"><span style="color: #FF6179">$user</span> = <span style="color: #FF6179">$person</span>->user;</span>
-              <span class="editor-line tab-1"><span style="color: #FF6179">$coauthors</span> = <span style="color: #FF6179">$this</span>->getCoauthorsData(<span style="color: #FF6179">$person</span>);</span>
-              <span class="editor-line tab-1"><span style="color: #FF6179">$scopusMap</span> = <span style="color: #FF6179">$this</span>->getScopusMap(<span style="color: #FF6179">$person</span>);</span>
-              <span class="editor-line tab-1" style="color: #aaaaaa">// Grant sorting logic, default is year descending</span>
-              <span class="editor-line tab-1"><span style="color: #FF6179">$grantSort</span> = <span style="color: #FF6179">$request</span>->input(<span style="color: #C9E590">'grantSort'</span>, <span style="color: #C9E590">'year_desc'</span>);</span>
-              <span class="editor-line tab-1"><span style="color: #FF6179">$grants</span> = <span style="color: #FF6179">$this</span>->sortGrants(<span style="color: #FF6179">$person</span>->grants, <span style="color: #FF6179">$grantSort</span>);</span>
+        </div>
+      </div>
+
+      <div class="container build-row-2">
+        <div class="row">
+          <div class="col-lg-5 d-flex align-items-center justify-content-start">
+            <p class="fs-5 inter-light mb-lg-0 mb-4">
+              <br />
+              The project required balancing technical complexity with usability—ensuring the
+              platform could handle large volumes of interconnected data while still delivering a clean,
+              modern user experience. For i3, this work exemplified how targeted internal development
+              can modernize legacy systems without relying on external vendors.
+            </p>
+        </div>
+          <div class="col-lg-7">
+            <div class="mac-header bg-white justify-content-start align-items-center gap-2 d-flex ps-3 py-2 rounded-top-3">
+              <div class="mac-circle red"></div>
+              <div class="mac-circle yellow"></div>
+              <div class="mac-circle green"></div>
+            </div>
+            <div class="mac-editor text-light-grey fs-6 py-4 px-3 d-flex flex-column gap-5 pb-4 pb-lg-0">
+              <div class="line-group d-flex flex-column align-items-start">
+                <span class="editor-line tab-0" style="color: #aaaaaa">// Single faculty profile page</span>
+                <span class="editor-line tab-0"><span style="color: #84D3EC">public function</span> show(Request <span style="color: #FF6179">$request</span>, <span style="color: #FF6179">$slug</span>, <span style="color: #FF6179">$tab</span> = <span style="color: #C9E590">'show'</span>){</span>
+                <span class="editor-line tab-1"><span style="color: #FF6179">$person</span> = <span style="color: #FF6179">$this</span>->loadPersonAndRelationships(<span style="color: #FF6179">$slug</span>);</span>
+                <span class="editor-line tab-1"><span style="color: #FF6179">$user</span> = <span style="color: #FF6179">$person</span>->user;</span>
+                <span class="editor-line tab-1"><span style="color: #FF6179">$coauthors</span> = <span style="color: #FF6179">$this</span>->getCoauthorsData(<span style="color: #FF6179">$person</span>);</span>
+                <span class="editor-line tab-1"><span style="color: #FF6179">$scopusMap</span> = <span style="color: #FF6179">$this</span>->getScopusMap(<span style="color: #FF6179">$person</span>);</span>
+                <span class="editor-line tab-1" style="color: #aaaaaa">// Grant sorting logic, default is year descending</span>
+                <span class="editor-line tab-1"><span style="color: #FF6179">$grantSort</span> = <span style="color: #FF6179">$request</span>->input(<span style="color: #C9E590">'grantSort'</span>, <span style="color: #C9E590">'year_desc'</span>);</span>
+                <span class="editor-line tab-1"><span style="color: #FF6179">$grants</span> = <span style="color: #FF6179">$this</span>->sortGrants(<span style="color: #FF6179">$person</span>->grants, <span style="color: #FF6179">$grantSort</span>);</span>
+
+              </div>
 
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="result-wrap text-black pt-5 pb-5 position-relative rounded-bottom-4">
-    <div class="container result">
-          <span class="text-start inter-light fs-5">07 The Result</span>
+  <!-- Result -->
+  <section>
+    <div class="result-wrap text-black pt-5 pb-5 position-relative rounded-bottom-4">
+      <div class="container result">
+            <span class="text-start inter-light fs-5">07 The Result</span>
 
-      <div class="row">
-        <span class="inter-light fs-3 mb-3">A <span class="inter-med">centralized</span>, living source of academic expertise.</span>
-        <p class="w-100 fs-5 inter-light">
-          Lincus provides more than search functionality—it reveals the research ecosystem of the university.
-          Users can explore faculty collaboration networks, discover connections, and gain a fuller picture of
-          academic work that often remains invisible outside of publications or individual departments.
-          <br />
-          <br />
-          For Institutional Insights & Innovation, Lincus represents a scalable model for institutional tools:
-          systems that serve multiple audiences, rely on authoritative internal data, and evolve alongside the university.
-          By investing in internal development talent and modern infrastructure, i3 is helping UConn better showcase its
-          expertise—both internally and to the broader public.
+        <div class="row">
+          <span class="inter-light fs-3 mb-3">A <span class="inter-med">centralized</span>, living source of academic expertise.</span>
+          <p class="w-100 fs-5 inter-light">
+            Lincus provides more than search functionality—it reveals the research ecosystem of the university.
+            Users can explore faculty collaboration networks, discover connections, and gain a fuller picture of
+            academic work that often remains invisible outside of publications or individual departments.
+            <br />
+            <br />
+            For Institutional Insights & Innovation, Lincus represents a scalable model for institutional tools:
+            systems that serve multiple audiences, rely on authoritative internal data, and evolve alongside the university.
+            By investing in internal development talent and modern infrastructure, i3 is helping UConn better showcase its
+            expertise—both internally and to the broader public.
+          </p>
+        </div>
+        <!-- hide for now
+        <div class="row">
+          <div class="col-6 mx-auto">
+            <table class="result-table">
+              <tr class="table-titles">
+                <td></td>
+                <td><span style="background: rgba(248, 184, 29, .2)">Lincus</span></td>
+                <td><span style="background: rgba(66, 165, 245, .2)">Interfolio</span></td>
+                <td><span style="background: rgba(163, 128, 246, .2)">Ellucian</span></td>
+                <td><span style="background: rgba(94, 200, 129, .2)">Watermark</span></td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="title-col">
+                  <span class="fs-6 inter-med text-white mt-auto ms-2 mb-2 z-1">1</span>
+                  Lorem Ipsum
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="title-col">
+                  <span class="card-num fs-6 inter-med text-white mt-auto ms-2 mb-2 z-1">2</span>
+                  Lorem Ipsum
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="title-col">
+                  <span class="card-num fs-6 inter-med text-white mt-auto center ms-2 mb-2 z-1">3</span>
+                  Lorem Ipsum
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="title-col">
+                  <span class="card-num fs-6 inter-med text-white mt-auto ms-2 mb-2 z-1">4</span>
+                  Lorem Ipsum
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="title-col">
+                  <span class="card-num fs-6 inter-med text-white mt-auto ms-2 mb-2 z-1">5</span>
+                  Lorem Ipsum
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="title-col">
+                  <span class="card-num fs-6 inter-med text-white center mt-auto ms-2 mb-2 z-1">6</span>
+                  Lorem Ipsum
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-x">
+                  <span></span>
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+                <td class="col-check">
+                  <span></span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        -->
+        <div class="align-items-center col-12 ps-2 result-logo-wrap col-sm-11 col-xl-12 d-flex gap-3 mx-auto mt-4 rounded-5">
+          <img src="assets/logo.svg" alt="Lincus Logo" class="result-logo">
+          <span class="lust-semi fs-xl fs-xs-xxl">Lincus</span>
+        </div>
+
+        <div class="row justify-content-between mx-auto gx-4">
+          <div class="col-xxl-4 col-xl-6 col-12 col-sm-11 d-flex justify-content-between mx-auto mx-xl-0 align-items-center result-colors text-center gap-3 mt-4">
+            <div class="d-flex flex-column justify-content-center gap-2">
+              <span id="charcoal" class="color"></span>
+              <span class="inter-med text-slate-grey fs-6">charcoal</span>
+              <span class="fs-6 text-slate-grey inter-light opacity-50">#2C2B2B</span>
+            </div>
+            <div class="d-flex flex-column justify-content-center gap-2">
+              <span id="midnight" class="color"></span>
+              <span class="inter-med text-slate-grey fs-6">midnight</span>
+              <span class="fs-6 text-slate-grey opacity-50 inter-light">#020228</span>
+            </div>
+            <div class="d-flex flex-column justify-content-center gap-2">
+              <span id="sunflower" class="color"></span>
+              <span class="inter-med text-slate-grey fs-6">sunflower</span>
+              <span class="fs-6 text-slate-grey inter-light opacity-50">#F8B81D</span>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+              <span id="light-grey" class="color"></span>
+              <span class="inter-med text-slate-grey fs-6">light grey</span>
+              <span class="fs-6 text-slate-grey inter-light opacity-50">#F6F6F6</span>
+            </div>
+          </div>
+
+          <div class="col-xxl-3 col-xl-6 col-12 heads-wrap d-flex px-2 justify-content-xxl-center justify-content-evenly align-items-center gap-xxl-5 gap-5 mt-4">
+            <div class="d-flex flex-column">
+              <span class="result-header-1 lust-light fs-1">Header 1</span>
+              <span class="fs-6 text-slate-grey inter-light opacity-50 result-head-1-desc">Lust / 60px</span>
+              <span class="result-header-2 lust-light">Header 2</span>
+              <span class="fs-6 text-slate-grey inter-light opacity-50 result-head-2-desc">Lust / 20px</span>
+            </div>
+
+            <div class="d-flex flex-column me-2 d-flex justify-content-between">
+              <div class="result-header-3 inter-reg">Header 3</div>
+              <span class="fs-6 text-slate-grey inter-light opacity-50 mb-4">Inter / 24px</span>
+              <div class="result-paragraph inter-reg">Paragraph</div>
+              <span class="fs-6 text-slate-grey inter-light opacity-50">Inter / 16px</span>
+            </div>
+
+          </div>
+          <div class="col-xxl-5 mx-auto col-12 text-xxl-start text-center d-flex result-text flex-column">
+            <span class="lust-reg large text-xxl-start text-center mx-auto">abcdefghijkl</span>
+            <span class="fs-1 lust-light" style="white-space: nowrap;">abcdefghijklmnoprstuvwxyz</span>
+          </div>
+        </div>
+
+        <div class="row screenshot-row">
+          <div class="col-5 col-xxl-3 align-items-center d-flex pb-3 order-0">
+            <div class="screenshot-item z-3 filter fs-6 mx-auto p-3 position-relative">
+              <svg width="294" height="85" viewBox="0 0 294 85" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
+                <path d="M293.5 25.2271C293.5 25.2271 209 -9.27318 121.5 3.22754C34 15.7283 11 59.2259 4 79.2272" stroke="url(#paint0_linear_98_5)" stroke-dasharray="3 3"/>
+                <circle cx="4" cy="80.7271" r="4" transform="rotate(-180 4 80.7271)" fill="#F8B81D"/>
+                <defs>
+                  <linearGradient id="paint0_linear_98_5" x1="25.8579" y1="26.2217" x2="204.5" y2="26.2217" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F8B81D"/>
+                    <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span class="z-2 inter-med text-slate-grey position-relative">Filter</span>
+              <p class="z-2 mb-0 inter-light text-slate-grey position-relative">by department or campus to narrow your results</p>
+            </div>
+          </div>
+          <div class="col-10 col-xxl-6 mx-auto order-2 order-xxl-1">
+            <div class="img-wrap position-relative">
+              <div class="screenshot-item-abs z-3 filter fs-6 mx-auto p-3 position-absolute">
+              <svg width="294" height="85" viewBox="0 0 294 85" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
+                <path d="M293.5 25.2271C293.5 25.2271 209 -9.27318 121.5 3.22754C34 15.7283 11 59.2259 4 79.2272" stroke="url(#paint0_linear_98_5)" stroke-dasharray="3 3"/>
+                <circle cx="4" cy="80.7271" r="4" transform="rotate(-180 4 80.7271)" fill="#F8B81D"/>
+                <defs>
+                  <linearGradient id="paint0_linear_98_5" x1="25.8579" y1="26.2217" x2="204.5" y2="26.2217" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F8B81D"/>
+                    <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span class="z-2 inter-med text-slate-grey position-relative">Filter</span>
+              <p class="z-2 mb-0 inter-light text-slate-grey position-relative">by department or campus to narrow your results</p>
+            </div>
+              <img src="assets/lincus-map.png" alt="Screenshot of search page" class="img-fluid screenshot">
+            </div>
+          </div>
+          <div class="col-4 col-xxl-3 order-1 order-xxl-2">
+            <div class="screenshot-item search fs-6 mx-auto p-3 position-relative">
+              <svg width="177" height="8" viewBox="0 0 177 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
+              <circle cx="173" cy="4" r="4" transform="rotate(-180 173 4)" fill="#F8B81D"/>
+              <path d="M0 4.0034C0 4.0034 162.5 4.00046 173.5 4.00047" stroke="url(#paint0_linear_99_6)" stroke-dasharray="3 3"/>
+              <defs>
+              <linearGradient id="paint0_linear_99_6" x1="203.642" y1="-1.49805" x2="24.9998" y2="-1.49806" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F8B81D"/>
+              <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
+              </linearGradient>
+              </defs>
+              </svg>
+
+              <span class="z-2 inter-med text-slate-grey position-relative">Search</span>
+              <p class="z-2 mb-0 inter-light text-slate-grey position-relative">for name or keyword</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-7"></div>
+          <div class="col-3 d-flex justify-content-end ms-5">
+            <div class="screenshot-item connect fs-6 m-auto p-3 position-relative">
+              <svg width="181" height="205" viewBox="0 0 181 205" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
+                <path d="M11.1205 42.3728C11.1205 42.3728 8.62026 98.5532 51.6201 132.554C94.6198 166.554 153.962 159.417 175.034 157.184" stroke="url(#paint0_linear_101_8)" stroke-dasharray="3 3"/>
+                <circle cx="174.948" cy="157.38" r="4" transform="rotate(64.6603 174.948 157.38)" fill="#F8B81D"/>
+                <defs>
+                  <linearGradient id="paint0_linear_101_8" x1="174.62" y1="160.374" x2="14.1205" y2="64.8738" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F8B81D"/>
+                    <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span class="z-2 inter-med text-slate-grey position-relative">Connect</span>
+              <p class="z-2 mb-0 inter-light text-slate-grey position-relative">with individuals based on their expertise</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row summarize-row align-items-center">
+          <div class="col-lg-3 col-12">
+            <div class="screenshot-item summarize fs-6 m-auto p-3 position-relative">
+              <svg width="177" height="8" viewBox="0 0 177 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
+              <circle cx="4" cy="4" r="4" fill="#F8B81D"/>
+              <path d="M177 3.99612C177 3.99612 14.5001 3.99905 3.5 3.99905" stroke="url(#paint0_linear_102_9)" stroke-dasharray="3 3"/>
+              <defs>
+              <linearGradient id="paint0_linear_102_9" x1="-26.6421" y1="9.49755" x2="152" y2="9.49759" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F8B81D"/>
+              <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
+              </linearGradient>
+              </defs>
+              </svg>
+
+
+              <span class="z-2 inter-med text-slate-grey position-relative">Summarize</span>
+              <p class="z-2 mb-0 inter-light text-slate-grey position-relative">through a visual wordbubble of topics</p>
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-7 lust-reg">
+            <img src="assets/wordbubble.png" style="width:100%;" alt="lincus word bubble example">
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonies-wrap">
+        <button style="margin:0px 20px;"
+          id="testimonials-control-btn"
+          class="testimonials-control-btn"
+          aria-label="Pause testimonials carousel"
+          aria-pressed="false"
+          title="Press to pause/play">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/>
+          </svg>
+        </button>
+        <div class="testimonies-row-1 d-flex gap-2 mb-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Looking Ahead -->
+  <section>
+    <div class="container looking-ahead pt-5 mt-4" style="min-height: 1000px">
+      <span class="text-start inter-light fs-5">08 Looking Ahead</span>
+      <div class="row mb-2">
+        <p class="w-100 fs-3 inter-light">
+          With Lincus, Institutional Insights & Innovation has laid the foundation for
+          a <span class="inter-med">long-term research discovery platform </span> that reflects the university as it exists today, not as it existed years ago.
         </p>
       </div>
-      <!-- hide for now
-      <div class="row">
-        <div class="col-6 mx-auto">
-          <table class="result-table">
-            <tr class="table-titles">
-              <td></td>
-              <td><span style="background: rgba(248, 184, 29, .2)">Lincus</span></td>
-              <td><span style="background: rgba(66, 165, 245, .2)">Interfolio</span></td>
-              <td><span style="background: rgba(163, 128, 246, .2)">Ellucian</span></td>
-              <td><span style="background: rgba(94, 200, 129, .2)">Watermark</span></td>
-            </tr>
+      <!-- hide for  now
+      <div class="row g-3 mb-4">
+        <div class="col-lg-4">
+          <div class="bg-white stat-shadow radius h-100 p-4">
+            <h3 class="fs-4 fw-semibold text-center mb-4">Lorem ipsum dolor<br>Lincus?</h3>
 
-            <tr class="table-row">
-              <td class="title-col">
-                <span class="fs-6 inter-med text-white mt-auto ms-2 mb-2 z-1">1</span>
-                Lorem Ipsum
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-            </tr>
+            <div class="d-flex flex-column gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <div class="stat-bar position-relative px-3 stat-faculty">
+                  <span class="text-start inter-med fs-5 text-white position-relative z-2">Faculty</span>
+                  <span class="text-end inter-reg fs-5 me-0 ms-auto">60%</span>
+                </div>
+              </div>
 
-            <tr class="table-row">
-              <td class="title-col">
-                <span class="card-num fs-6 inter-med text-white mt-auto ms-2 mb-2 z-1">2</span>
-                Lorem Ipsum
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-            </tr>
+              <div class="d-flex align-items-center gap-2">
+                <div class="stat-bar position-relative px-3 stat-students">
+                  <span class="text-start inter-med fs-5 text-white position-relative z-2">Students</span>
+                  <span class="text-end inter-reg fs-5 me-0 ms-auto">45%</span>
+                </div>
+              </div>
 
-            <tr class="table-row">
-              <td class="title-col">
-                <span class="card-num fs-6 inter-med text-white mt-auto center ms-2 mb-2 z-1">3</span>
-                Lorem Ipsum
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-            </tr>
+              <div class="d-flex align-items-center gap-2">
+                <div class="stat-bar position-relative px-3 stat-staff">
+                  <span class="text-start inter-med fs-5 text-white position-relative z-2">Staff</span>
+                  <span class="text-end inter-reg fs-5 me-0 ms-auto">31%</span>
+                </div>
+              </div>
 
-            <tr class="table-row">
-              <td class="title-col">
-                <span class="card-num fs-6 inter-med text-white mt-auto ms-2 mb-2 z-1">4</span>
-                Lorem Ipsum
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-            </tr>
+              <div class="d-flex align-items-center gap-2">
+                <div class="stat-bar position-relative px-3 stat-external">
+                  <span class="text-start inter-med fs-5 text-white position-relative z-2">External</span>
+                  <span class="text-end inter-reg fs-5 me-0 ms-auto">18%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <tr class="table-row">
-              <td class="title-col">
-                <span class="card-num fs-6 inter-med text-white mt-auto ms-2 mb-2 z-1">5</span>
-                Lorem Ipsum
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-            </tr>
+        <div class="col-lg-4">
+          <div class="bg-white stat-shadow radius h-100 p-4">
+            <h3 class="fs-4 fw-semibold text-center mb-4">Lorem ipsum dolor<br>Lincus?</h3>
 
-            <tr class="table-row">
-              <td class="title-col">
-                <span class="card-num fs-6 inter-med text-white center mt-auto ms-2 mb-2 z-1">6</span>
-                Lorem Ipsum
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-x">
-                <span></span>
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-              <td class="col-check">
-                <span></span>
-              </td>
-            </tr>
-          </table>
+            <div class="position-relative mx-auto" style="width:225px; height:225px;">
+              <div class="w-100 h-100 stat-chart rounded-circle"></div>
+              <div class="position-absolute top-50 start-50 translate-middle rounded-circle bg-white"
+                   style="width:0; height:0;"></div>
+
+              <span class="position-absolute inter-reg fs-5" style="top:5px; right:3px; line-height:1.1;color: #B0B3BB">
+                no<br><strong>18%</strong>
+              </span>
+
+              <span class="position-absolute inter-reg fs-5 text-white text-center" style="left:48%; top:70%; transform:translate(-50%,-50%); line-height:1.1;">
+                yes<br><strong>82%</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="bg-white stat-shadow rounded-1 shadow-sm h-100 p-4">
+            <h3 class="fs-4 fw-semibold text-center mb-4">Lorem ipsum dolor<br>Lincus?</h3>
+
+            <div class="d-flex flex-column gap-2 stat-bars fs-5">
+              <div class="radius px-3 py-2 bg-white">Lorem ipsum dolor sit amet.</div>
+              <div class="radius px-3 py-2 bar-selected bg-white">Lorem ipsum dolor sit amet.</div>
+              <div class="radius px-3 py-2 bg-white">Lorem ipsum dolor sit amet.</div>
+              <div class="radius px-3 py-2 bg-white">Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
         </div>
       </div>
       -->
-      <div class="align-items-center d-flex gap-3 mt-4 rounded-5">
-        <img src="assets/logo.svg" alt="Lincus Logo" class="result-logo">
-        <span class="lust-semi fs-xl">Lincus</span>
-      </div>
-
-      <div class="row justify-content-between">
-        <div class="col-lg-5 col-12 d-flex justify-content-lg-between justify-content-start align-items-center result-colors text-center gap-3 mt-4">
-          <div class="d-flex flex-column justify-content-center gap-2">
-            <span id="charcoal" class="color"></span>
-            <span class="inter-med text-slate-grey fs-6">charcoal</span>
-            <span class="fs-6 text-slate-grey inter-light opacity-50">#2C2B2B</span>
-          </div>
-          <div class="d-flex flex-column justify-content-center gap-2">
-            <span id="midnight" class="color"></span>
-            <span class="inter-med text-slate-grey fs-6">midnight</span>
-            <span class="fs-6 text-slate-grey opacity-50 inter-light">#020228</span>
-          </div>
-          <div class="d-flex flex-column justify-content-center gap-2">
-            <span id="sunflower" class="color"></span>
-            <span class="inter-med text-slate-grey fs-6">sunflower</span>
-            <span class="fs-6 text-slate-grey inter-light opacity-50">#F8B81D</span>
-          </div>
-          <div class="d-flex flex-column justify-content-center align-items-center gap-2">
-            <span id="light-grey" class="color"></span>
-            <span class="inter-med text-slate-grey fs-6">light grey</span>
-            <span class="fs-6 text-slate-grey inter-light opacity-50">#F6F6F6</span>
-          </div>
-        </div>
-
-        <div class="col-lg-5 col-12 heads-wrap d-flex px-2 justify-content-lg-center align-items-center gap-5 mt-4">
-          <div class="d-flex flex-column">
-            <span class="result-header-1 lust-light fs-1">Header 1</span>
-            <span class="fs-6 text-slate-grey inter-light opacity-50 result-head-1-desc">Lust / 60px</span>
-            <span class="result-header-2 lust-light">Header 2</span>
-            <span class="fs-6 text-slate-grey inter-light opacity-50">Lust / 20px</span>
-          </div>
-
-          <div class="d-flex flex-column me-2 d-flex justify-content-between">
-            <div class="result-header-3 inter-reg">Header 3</div>
-            <span class="fs-6 text-slate-grey inter-light opacity-50 mb-4">Inter / 24px</span>
-            <div class="result-paragraph inter-reg">Paragraph</div>
-            <span class="fs-6 text-slate-grey inter-light opacity-50">Inter / 16px</span>
-          </div>
-
-        </div>
-        <div class="col-lg-2 col-12 d-flex result-text flex-column">
-          <span class="lust-reg large">abcdefghijklmnopqrstuvwxyz</span>
-          <span class="fs-1 lust-light" style="white-space: nowrap;">abcdefghijklmnopqrstuvwxyz</span>
-        </div>
-      </div>
-
-      <div class="row screenshot-row">
-        <div class="col-3 align-items-center d-flex pb-3">
-          <div class="screenshot-item z-3 filter fs-6 m-auto p-3 position-relative">
-            <svg width="294" height="85" viewBox="0 0 294 85" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
-              <path d="M293.5 25.2271C293.5 25.2271 209 -9.27318 121.5 3.22754C34 15.7283 11 59.2259 4 79.2272" stroke="url(#paint0_linear_98_5)" stroke-dasharray="3 3"/>
-              <circle cx="4" cy="80.7271" r="4" transform="rotate(-180 4 80.7271)" fill="#F8B81D"/>
-              <defs>
-                <linearGradient id="paint0_linear_98_5" x1="25.8579" y1="26.2217" x2="204.5" y2="26.2217" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F8B81D"/>
-                  <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="z-2 inter-med text-slate-grey position-relative">Filter</span>
-            <p class="z-2 mb-0 inter-light text-slate-grey position-relative">by department or campus to narrow your results</p>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="img-wrap position-relative">
-            <img src="assets/lincus-map.png" alt="Screenshot of search page" class="img-fluid screenshot">
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="screenshot-item search fs-6 m-auto p-3 position-relative">
-            <svg width="177" height="8" viewBox="0 0 177 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
-            <circle cx="173" cy="4" r="4" transform="rotate(-180 173 4)" fill="#F8B81D"/>
-            <path d="M0 4.0034C0 4.0034 162.5 4.00046 173.5 4.00047" stroke="url(#paint0_linear_99_6)" stroke-dasharray="3 3"/>
-            <defs>
-            <linearGradient id="paint0_linear_99_6" x1="203.642" y1="-1.49805" x2="24.9998" y2="-1.49806" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#F8B81D"/>
-            <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
-            </linearGradient>
-            </defs>
-            </svg>
-
-            <span class="z-2 inter-med text-slate-grey position-relative">Search</span>
-            <p class="z-2 mb-0 inter-light text-slate-grey position-relative">for name or keyword</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-7"></div>
-        <div class="col-3 d-flex justify-content-end ms-5">
-          <div class="screenshot-item connect fs-6 m-auto p-3 position-relative">
-            <svg width="181" height="205" viewBox="0 0 181 205" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
-              <path d="M11.1205 42.3728C11.1205 42.3728 8.62026 98.5532 51.6201 132.554C94.6198 166.554 153.962 159.417 175.034 157.184" stroke="url(#paint0_linear_101_8)" stroke-dasharray="3 3"/>
-              <circle cx="174.948" cy="157.38" r="4" transform="rotate(64.6603 174.948 157.38)" fill="#F8B81D"/>
-              <defs>
-                <linearGradient id="paint0_linear_101_8" x1="174.62" y1="160.374" x2="14.1205" y2="64.8738" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F8B81D"/>
-                  <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span class="z-2 inter-med text-slate-grey position-relative">Connect</span>
-            <p class="z-2 mb-0 inter-light text-slate-grey position-relative">with individuals based on their expertise</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row summarize-row align-items-center">
-        <div class="col-lg-3 col-12">
-          <div class="screenshot-item summarize fs-6 m-auto p-3 position-relative">
-            <svg width="177" height="8" viewBox="0 0 177 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
-            <circle cx="4" cy="4" r="4" fill="#F8B81D"/>
-            <path d="M177 3.99612C177 3.99612 14.5001 3.99905 3.5 3.99905" stroke="url(#paint0_linear_102_9)" stroke-dasharray="3 3"/>
-            <defs>
-            <linearGradient id="paint0_linear_102_9" x1="-26.6421" y1="9.49755" x2="152" y2="9.49759" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#F8B81D"/>
-            <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
-            </linearGradient>
-            </defs>
-            </svg>
-
-
-            <span class="z-2 inter-med text-slate-grey position-relative">Summarize</span>
-            <p class="z-2 mb-0 inter-light text-slate-grey position-relative">through a visual wordbubble of topics</p>
-          </div>
-        </div>
-        <div class="col-1"></div>
-        <div class="col-7 lust-reg">
-          <img src="assets/wordbubble.png" style="width:100%;" alt="lincus word bubble example">
-        </div>
-      </div>
-    </div>
-
-    <div class="testimonies-wrap">
-      <button style="margin:0px 20px;"
-        id="testimonials-control-btn"
-        class="testimonials-control-btn"
-        aria-label="Pause testimonials carousel"
-        aria-pressed="false"
-        title="Press to pause/play">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/>
-        </svg>
-      </button>
-      <div class="testimonies-row-1 d-flex gap-2 mb-4"></div>
-    </div>
-
-  </section>
-
-  <section class="container looking-ahead pt-5 mt-4" style="min-height: 1000px">
-    <span class="text-start inter-light fs-5">08 Looking Ahead</span>
-    <div class="row mb-2">
-      <p class="w-100 fs-3 inter-light">
-        With Lincus, Institutional Insights & Innovation has laid the foundation for
-        a <span class="inter-med">long-term research discovery platform </span> that reflects the university as it exists today, not as it existed years ago.
-      </p>
-    </div>
-    <!-- hide for  now
-    <div class="row g-3 mb-4">
-      <div class="col-lg-4">
-        <div class="bg-white stat-shadow radius h-100 p-4">
-          <h3 class="fs-4 fw-semibold text-center mb-4">Lorem ipsum dolor<br>Lincus?</h3>
-
-          <div class="d-flex flex-column gap-2">
-            <div class="d-flex align-items-center gap-2">
-              <div class="stat-bar position-relative px-3 stat-faculty">
-                <span class="text-start inter-med fs-5 text-white position-relative z-2">Faculty</span>
-                <span class="text-end inter-reg fs-5 me-0 ms-auto">60%</span>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center gap-2">
-              <div class="stat-bar position-relative px-3 stat-students">
-                <span class="text-start inter-med fs-5 text-white position-relative z-2">Students</span>
-                <span class="text-end inter-reg fs-5 me-0 ms-auto">45%</span>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center gap-2">
-              <div class="stat-bar position-relative px-3 stat-staff">
-                <span class="text-start inter-med fs-5 text-white position-relative z-2">Staff</span>
-                <span class="text-end inter-reg fs-5 me-0 ms-auto">31%</span>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center gap-2">
-              <div class="stat-bar position-relative px-3 stat-external">
-                <span class="text-start inter-med fs-5 text-white position-relative z-2">External</span>
-                <span class="text-end inter-reg fs-5 me-0 ms-auto">18%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="bg-white stat-shadow radius h-100 p-4">
-          <h3 class="fs-4 fw-semibold text-center mb-4">Lorem ipsum dolor<br>Lincus?</h3>
-
-          <div class="position-relative mx-auto" style="width:225px; height:225px;">
-            <div class="w-100 h-100 stat-chart rounded-circle"></div>
-            <div class="position-absolute top-50 start-50 translate-middle rounded-circle bg-white"
-                 style="width:0; height:0;"></div>
-
-            <span class="position-absolute inter-reg fs-5" style="top:5px; right:3px; line-height:1.1;color: #B0B3BB">
-              no<br><strong>18%</strong>
-            </span>
-
-            <span class="position-absolute inter-reg fs-5 text-white text-center" style="left:48%; top:70%; transform:translate(-50%,-50%); line-height:1.1;">
-              yes<br><strong>82%</strong>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="bg-white stat-shadow rounded-1 shadow-sm h-100 p-4">
-          <h3 class="fs-4 fw-semibold text-center mb-4">Lorem ipsum dolor<br>Lincus?</h3>
-
-          <div class="d-flex flex-column gap-2 stat-bars fs-5">
-            <div class="radius px-3 py-2 bg-white">Lorem ipsum dolor sit amet.</div>
-            <div class="radius px-3 py-2 bar-selected bg-white">Lorem ipsum dolor sit amet.</div>
-            <div class="radius px-3 py-2 bg-white">Lorem ipsum dolor sit amet.</div>
-            <div class="radius px-3 py-2 bg-white">Lorem ipsum dolor sit amet.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    -->
-    <div class="row">
-      <div class="col-12">
-        <p class="mb-4 inter-light fs-5">
-          The project demonstrates how thoughtful innovation—paired with strong technical execution—can transform underused systems into essential institutional resources.
-          <br />
-          <br />
-          As Lincus continues to grow, it stands as a case study in how i3 supports the university by turning complex data into accessible insight, strengthening connections across campus, and making UConn’s research more visible to everyone who needs it.
-        </p>
-
-
-        <span class="mb-b fs-2 inter-light">
-          And for <a target="_blank" href="https://www.linkedin.com/in/magdalena-danielewicz"><span class="inter-med yellow-shadow">Maggie?</span></a>
-        </span>
-
-        <p class="mb-4 pt-3 inter-light fs-5">
-          Maggie sees herself continuing in software development with a focus on building tools that improve how people access information and interact with complex systems. While she entered computer science without a fully defined career path, her work on Lincus through i3 helped clarify her interests in applied software engineering, data-driven systems, and user-centered design.
-          <br />
-          <br />
-          Through leading the redevelopment of Lincus, Maggie discovered a strong motivation in making systems more intuitive and impactful—often in ways users may not immediately notice. She particularly is interested in work that modernizes legacy platforms, improves data usability, and translates institutional needs into scalable solutions.
-        </p>
-      </div>
-    </div>
-
-    <div class="row g-4 align-items-stretch maggie-row">
-      <div class="col-lg-6">
-        <div class="bg-off-white radius quote-wrap px-5 h-100 position-relative d-flex flex-column justify-content-center position-relative">
-          <svg width="54" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="quotation">
-            <path d="M6.91197 29.5679C4.77864 29.5679 3.11464 28.7999 1.91997 27.2639C0.639974 25.7279 -2.64645e-05 23.6372 -2.64645e-05 20.9919C-2.64645e-05 17.0666 0.853307 13.4826 2.55997 10.2399C4.35197 6.99723 7.21064 3.9679 11.136 1.1519C12.16 0.383901 12.9706 0.213234 13.568 0.6399C13.9093 0.895902 14.08 1.2799 14.08 1.7919C14.08 2.21857 13.7813 2.64523 13.184 3.0719C10.2826 5.54657 8.40531 7.46657 7.55197 8.8319C6.78397 10.1119 6.39997 11.4772 6.39997 12.9279C6.39997 14.4639 6.74131 15.6586 7.42397 16.5119C8.10664 17.2799 8.87464 17.9626 9.72797 18.5599C10.5813 19.0719 11.3493 19.7119 12.032 20.4799C12.7146 21.2479 13.056 22.3999 13.056 23.9359C13.056 25.4719 12.5013 26.7946 11.392 27.9039C10.368 29.0132 8.87464 29.5679 6.91197 29.5679ZM26.112 29.5679C23.9786 29.5679 22.272 28.7999 20.992 27.2639C19.7973 25.7279 19.2 23.6372 19.2 20.9919C19.2 17.0666 20.0533 13.4826 21.76 10.2399C23.552 6.99723 26.4106 3.9679 30.336 1.1519C31.36 0.383901 32.1706 0.213234 32.768 0.6399C33.1093 0.895902 33.28 1.2799 33.28 1.7919C33.28 2.21857 32.9813 2.64523 32.384 3.0719C29.4826 5.54657 27.6053 7.46657 26.752 8.8319C25.984 10.1119 25.6 11.4772 25.6 12.9279C25.6 14.4639 25.9413 15.6586 26.624 16.5119C27.3066 17.2799 28.0746 17.9626 28.928 18.5599C29.7813 19.0719 30.5493 19.7119 31.232 20.4799C31.9146 21.2479 32.256 22.3999 32.256 23.9359C32.256 25.4719 31.7013 26.7946 30.592 27.9039C29.568 29.0132 28.0746 29.5679 26.112 29.5679Z" fill="#31324E" fill-opacity="0.2"/>
-          </svg>
-
-          <p class="inter-light" style="font-style:italic;font-size:18px;">
-            i3 gave me the tools to transform my knowledge from 4 years at UConn and give back to the school that taught me so much. As a student, <strong>that experience is incredibly rewarding and unique</strong>. Being able to use my computing skills to rebuild Lincus — something that will help both faculty expertise and student research grow — is an opportunity I will always value.
+      <div class="row">
+        <div class="col-12">
+          <p class="mb-4 inter-light fs-5">
+            The project demonstrates how thoughtful innovation—paired with strong technical execution—can transform underused systems into essential institutional resources.
+            <br />
+            <br />
+            As Lincus continues to grow, it stands as a case study in how i3 supports the university by turning complex data into accessible insight, strengthening connections across campus, and making UConn’s research more visible to everyone who needs it.
           </p>
 
-          <p class=" mb-0 lust-light">Maggie, 2026</p>
+
+          <span class="mb-b fs-2 inter-light">
+            And for <a target="_blank" href="https://www.linkedin.com/in/magdalena-danielewicz"><span class="inter-med yellow-shadow">Maggie?</span></a>
+          </span>
+
+          <p class="mb-4 pt-3 inter-light fs-5">
+            Maggie sees herself continuing in software development with a focus on building tools that improve how people access information and interact with complex systems. While she entered computer science without a fully defined career path, her work on Lincus through i3 helped clarify her interests in applied software engineering, data-driven systems, and user-centered design.
+            <br />
+            <br />
+            Through leading the redevelopment of Lincus, Maggie discovered a strong motivation in making systems more intuitive and impactful—often in ways users may not immediately notice. She particularly is interested in work that modernizes legacy platforms, improves data usability, and translates institutional needs into scalable solutions.
+          </p>
         </div>
       </div>
 
-      <div class="col-lg-6">
-        <figure class="position-relative h-100 m-0">
-          <img
-            src="assets/mags.png"
-            alt="Maggie working on a project"
-            class="img-fluid w-100 h-100 object-fit-cover rounded-1"
-            style="min-height:340px;"
-          >
-          <figcaption class="position-absolute bottom-0 start-0 img-caption m-2 px-2 py-1 fs-6 text-black radius"
-                      style="background:rgba(255,255,255,.6);">
-            Maggie working on a project with the UConn Engineering House Learning Community.
-          </figcaption>
-        </figure>
+      <div class="row g-4 align-items-stretch maggie-row">
+        <div class="col-lg-6">
+          <div class="bg-off-white radius quote-wrap px-5 h-100 position-relative d-flex flex-column justify-content-center position-relative">
+            <svg width="54" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="quotation">
+              <path d="M6.91197 29.5679C4.77864 29.5679 3.11464 28.7999 1.91997 27.2639C0.639974 25.7279 -2.64645e-05 23.6372 -2.64645e-05 20.9919C-2.64645e-05 17.0666 0.853307 13.4826 2.55997 10.2399C4.35197 6.99723 7.21064 3.9679 11.136 1.1519C12.16 0.383901 12.9706 0.213234 13.568 0.6399C13.9093 0.895902 14.08 1.2799 14.08 1.7919C14.08 2.21857 13.7813 2.64523 13.184 3.0719C10.2826 5.54657 8.40531 7.46657 7.55197 8.8319C6.78397 10.1119 6.39997 11.4772 6.39997 12.9279C6.39997 14.4639 6.74131 15.6586 7.42397 16.5119C8.10664 17.2799 8.87464 17.9626 9.72797 18.5599C10.5813 19.0719 11.3493 19.7119 12.032 20.4799C12.7146 21.2479 13.056 22.3999 13.056 23.9359C13.056 25.4719 12.5013 26.7946 11.392 27.9039C10.368 29.0132 8.87464 29.5679 6.91197 29.5679ZM26.112 29.5679C23.9786 29.5679 22.272 28.7999 20.992 27.2639C19.7973 25.7279 19.2 23.6372 19.2 20.9919C19.2 17.0666 20.0533 13.4826 21.76 10.2399C23.552 6.99723 26.4106 3.9679 30.336 1.1519C31.36 0.383901 32.1706 0.213234 32.768 0.6399C33.1093 0.895902 33.28 1.2799 33.28 1.7919C33.28 2.21857 32.9813 2.64523 32.384 3.0719C29.4826 5.54657 27.6053 7.46657 26.752 8.8319C25.984 10.1119 25.6 11.4772 25.6 12.9279C25.6 14.4639 25.9413 15.6586 26.624 16.5119C27.3066 17.2799 28.0746 17.9626 28.928 18.5599C29.7813 19.0719 30.5493 19.7119 31.232 20.4799C31.9146 21.2479 32.256 22.3999 32.256 23.9359C32.256 25.4719 31.7013 26.7946 30.592 27.9039C29.568 29.0132 28.0746 29.5679 26.112 29.5679Z" fill="#31324E" fill-opacity="0.2"/>
+            </svg>
+
+            <p class="inter-light" style="font-style:italic;font-size:18px;">
+              i3 gave me the tools to transform my knowledge from 4 years at UConn and give back to the school that taught me so much. As a student, <strong>that experience is incredibly rewarding and unique</strong>. Being able to use my computing skills to rebuild Lincus — something that will help both faculty expertise and student research grow — is an opportunity I will always value.
+            </p>
+
+            <p class=" mb-0 lust-light">Maggie, 2026</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <figure class="position-relative h-100 m-0">
+            <img
+              src="assets/mags.png"
+              alt="Maggie working on a project"
+              class="img-fluid w-100 h-100 object-fit-cover rounded-1"
+              style="min-height:340px;"
+            >
+            <figcaption class="position-absolute bottom-0 start-0 img-caption m-2 px-2 py-1 fs-6 text-black radius"
+                        style="background:rgba(255,255,255,.6);">
+              Maggie working on a project with the UConn Engineering House Learning Community.
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>

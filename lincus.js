@@ -353,20 +353,6 @@ render();
 nodeGroups.call(drag(simulation))
 svg.style("visibility", "visible");
 
-const observer = new IntersectionObserver(entries => {
-  for (const entry of entries) {
-    if (!entry.isIntersecting) continue;
-
-    requestAnimationFrame(() => {
-      simulation.alpha(1).alphaTarget(0).restart();
-    });
-
-    observer.unobserve(svgEl);
-  }
-}, { threshold: 0.15 });
-
-observer.observe(svgEl);
-
 
 
   const processCards = Array.from(document.querySelectorAll('.process-card'));
@@ -398,21 +384,27 @@ observer.observe(svgEl);
     })
   }, { threshold: .75 })
 
-  const visionCards = Array.from(document.querySelectorAll('.vision-card'));
-  const visionSvgs = Array.from(document.querySelectorAll('.vision-dash'));
-  visionSvgs.forEach((svg, idx) => {
+
+  const positionPath = (svg, idx) => {
     const cardRect = visionCards[idx].getBoundingClientRect();
+    console.log(cardRect)
     const path = svg.querySelector('path.dash');
-    const cover = svg.querySelector('path.cover');
     const pathRect = path.getBoundingClientRect();
     const cardCenter = cardRect.left + (cardRect.width / 2);
     let tx = Math.round(pathRect.left - cardCenter);
     let ty = Math.round(pathRect.top - cardRect.bottom -10)
-    console.log(tx)
+
     tx = tx > 0 ? -tx : Math.abs(tx)
-    console.log(tx)
     ty = ty < 0 ? ty : -ty;
+
     svg.style.transform = `translateX(${tx}px) translateY(${ty}px)`;
+
+  }
+
+  const visionCards = Array.from(document.querySelectorAll('.vision-card'));
+  const visionSvgs = Array.from(document.querySelectorAll('.vision-dash'));
+  visionSvgs.forEach((svg, idx) => {
+    const cover = svg.querySelector('path.cover');
 
     cover.style.strokeDasharray = cover.getTotalLength();
     cover.style.strokeDashoffset = '0';
@@ -425,6 +417,8 @@ observer.observe(svgEl);
     dashObserver.observe(cover);
 
   })
+
+
 
 
   const macEditor = document.querySelector('.mac-editor');
@@ -486,25 +480,11 @@ observer.observe(svgEl);
         codeObserver.unobserve(macEditor);
       }
     })
-  }, { threshold: .75
+  }, { threshold: .75})
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  })
   codeObserver.observe(macEditor)
 
 
@@ -721,6 +701,9 @@ if (controlBtn) {
       }
     });
   }
+
+
+
 }
 
 window.addEventListener('resize', () => {
@@ -730,9 +713,74 @@ window.addEventListener('resize', () => {
   // try to keep scroll position roughly the same
   offset1 = prevOffset % seamlessWidth;
   positionTestimonyCards();
+  const exampleTextLG = document.querySelector('.result-text .large')
+  setExampleText()
+
 });
 
+  let int = null
+  function setExampleText() {
+    const wrap = document.querySelector('.result-text');
+    const largeText = wrap.querySelector('.large');
+    const fullString = 'abcdefghijklmnopqrstuvwxyz'
+    if(window.innerWidth > 1400) {
+      largeText.textContent = 'abcdefghijkl';
+    } else {
+      largeText.textContent = 'abcdefghijklmnopqrstuvwxyz'
+      let fits = false;
+      let test = 0;
+      if(int) clearInterval(int);
+      int = null;
+      int = setInterval(() => {
+        const wrapRect = wrap.getBoundingClientRect();
+        const textRect = largeText.getBoundingClientRect();
+        const dif = wrapRect.width - textRect.width
+        console.log(dif)
+        if(dif < 10) {
+          largeText.textContent = largeText.textContent.slice(0, -1)
+        } else if(dif > 150) {
+          largeText.textContent = fullString.slice(0, largeText.textContent.length + 1)
+        } else {
+          clearInterval(int);
+          int = null;
+        }
 
+      }, 1)
+    }
+  }
+
+
+  setExampleText()
+
+
+  const screenshotImg = document.querySelector('.screenshot');
+  const searchBox = document.querySelector('.screenshot-item.search');
+  const connectBox = document.querySelector('.screenshot-item.connect');
+  const filterBox = document.querySelector('.screenshot-item.filter')
+  const summaryBox = document.querySelector('.screenshot-item.summarize');
+
+  const placeSSItems = () => {
+    if(window.innerWidth > 1400) {
+      const SSRect = screenshotImg.getBoundingClientRect();
+      const searchRect = searchBox.getBoundingClientRect();
+      const searchPath = searchBox.querySelector('.item-path');
+      const searchMove = Math.round((SSRect.top + (SSRect.height * .15)) - (searchRect.top + (searchRect.height / 2)))
+      searchBox.style.marginTop = `${searchMove}px`
+      searchPath.style.left = `${-(searchPath.getBoundingClientRect().width - 4)}px`
+
+      const connectPath = connectBox.querySelector('.item-path');
+      connectPath.style.left = `${-(connectPath.getBoundingClientRect().width - 4)}px`
+
+
+      const filterPath = filterBox.querySelector('.item-path');
+      const fPathRect = filterPath.getBoundingClientRect();
+      const filterRect = filterBox.getBoundingClientRect();
+      filterPath.style.top = `${-(fPathRect.height - 4)}px`;
+      filterBox.style.marginTop = `${Math.round(Math.abs((fPathRect.top + (fPathRect.height * .3)) - (SSRect.top + (SSRect.height * .35))))}px`;
+    }
+
+  }
+  placeSSItems()
 })
 
 const delayMin = 50;
