@@ -719,7 +719,7 @@ window.addEventListener('resize', () => {
     const largeText = wrap.querySelector('.large');
     const fullString = 'abcdefghijklmnopqrstuvwxyz'
     if(window.innerWidth > 1400) {
-      largeText.textContent = 'abcdefghijkl';
+      largeText.textContent = 'abcdefgh';
     } else {
       largeText.textContent = 'abcdefghijklmnopqrstuvwxyz'
       let fits = false;

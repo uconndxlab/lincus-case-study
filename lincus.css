@@ -538,19 +538,16 @@ svg .shown {
   pointer-events: none;
 }
 
-/* card 1 dash */
 .dash-1 {
   bottom: -53%;
   left: 50%
 }
 
-/* card 2 dash */
 .dash-2 {
   bottom: -53%;
   left: 50%;
 }
 
-/* card 3 dash */
 .dash-3 {
   bottom: -53%;
   left: 50%;
@@ -877,7 +874,7 @@ span.tab-3 {
     top: 95%;      /* bottom of card */
     left: 50%;
     transform-origin: top left;
-    transform: translateX(-50%) rotate(90deg);
+    transform: rotate(90deg);
     z-index: 2;
   }
   .screenshot-item {
