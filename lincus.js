@@ -14,17 +14,19 @@ const leftLayers = [
 ];
 
 const rightLayers = [
-  { radius: 50, count: 4, speed: -0.0000, size: 20 },
-  { radius: 110, count: 7, speed: 0.0000, size: 17 },
-  { radius: 170, count: 9, speed: -0.0000, size: 13 },
-  { radius: 230, count: 11, speed: 0.0000, size: 10 },
-  { radius: 290, count: 13, speed: -0.0000, size: 7 },
+  { radius: 50, count: 4, speed: -0.000005, size: 20 },
+  { radius: 110, count: 7, speed: 0.0000075, size: 17 },
+  { radius: 170, count: 9, speed: -0.0000025, size: 13 },
+  { radius: 230, count: 11, speed: 0.0000035, size: 10 },
+  { radius: 290, count: 13, speed: -0.000008, size: 7 },
 ];
 
 
 const colors = [
   'rgba(0, 14, 47, 0.2)',
 ];
+
+let circleFrame = null;
 
 function resize(canvas, ctx) {
   const dpr = window.devicePixelRatio || 1;
@@ -39,6 +41,12 @@ function resize(canvas, ctx) {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.scale(dpr, dpr);
   ctx.globalAlpha = 0.80;
+
+  if(circleFrame) {
+    cancelAnimationFrame(circleFrame);
+    circleFrame = null;
+    render()
+  }
 
   return { cx: (canvas === leftCanvas ? 70 : width - 70), cy: (canvas === leftCanvas ? height / 2.55 : height / 2.5) };
 }
@@ -61,6 +69,7 @@ function draw(ctx, cx, cy, deltaTime, layers) {
   });
 }
 
+
 function render() {
   const left = resize(leftCanvas, leftCtx);
   const right = resize(rightCanvas, rightCtx);
@@ -73,10 +82,10 @@ function render() {
 
     draw(leftCtx, left.cx, left.cy, deltaTime, leftLayers);
     draw(rightCtx, right.cx, right.cy, deltaTime, rightLayers);
-    requestAnimationFrame(loop);
+    circleFrame = requestAnimationFrame(loop);
   }
 
-  requestAnimationFrame(loop);
+  circleFrame = requestAnimationFrame(loop);
 }
 
 
@@ -316,9 +325,11 @@ window.addEventListener('DOMContentLoaded', () => {
     .stop();
 
   const circlesRow = document.querySelector('.circles-row');
-  circlesRow.addEventListener('transitionend', () => {
+  circlesRow.addEventListener('transitionstart', () => {
     svg.style('visibility', 'visible');
-    simulation.restart();
+    requestAnimationFrame(() => {
+      simulation.alpha(1).alphaTarget(0).restart();
+    });
   }, { once: true });
 
 function render() {
@@ -342,20 +353,6 @@ resetToStartSpread();
 render();
 nodeGroups.call(drag(simulation))
 svg.style("visibility", "visible");
-
-const observer = new IntersectionObserver(entries => {
-  for (const entry of entries) {
-    if (!entry.isIntersecting) continue;
-
-    requestAnimationFrame(() => {
-      simulation.alpha(1).alphaTarget(0).restart();
-    });
-
-    observer.unobserve(svgEl);
-  }
-}, { threshold: 0.15 });
-
-observer.observe(svgEl);
 
 
 
