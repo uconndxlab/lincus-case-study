@@ -548,6 +548,7 @@ svg .shown {
   width: 100%
 }
 
+/* Laptop screen section of image */
 .screen-ref {
   position: absolute;
   left: 10.5%;
