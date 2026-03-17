@@ -261,8 +261,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const g = d3.select(gEl);
     const circle = g.select('circle');
     const id = +g.attr('id').split('-').pop();
-        console.log(`circle: ${circle}, id: ${id}`)
-    console.log(+circle.attr('cx'))
     const x0 = +circle.attr('cx');
     const y0 = +circle.attr('cy');
 
@@ -555,38 +553,32 @@ if(window.innerWidth > 768) {
   }, { threshold: .75 })
 
 
-  const positionPath = (svg, idx) => {
-    const cardRect = visionCards[idx].getBoundingClientRect();
-    console.log(cardRect)
-    const path = svg.querySelector('path.dash');
-    const pathRect = path.getBoundingClientRect();
-    const cardCenter = cardRect.left + (cardRect.width / 2);
-    let tx = Math.round(pathRect.left - cardCenter);
-    let ty = Math.round(pathRect.top - cardRect.bottom -10)
+  const screenRef = document.querySelector('.screen-ref');
 
-    tx = tx > 0 ? -tx : Math.abs(tx)
-    ty = ty < 0 ? ty : -ty;
-
-    svg.style.transform = `translateX(${tx}px) translateY(${ty}px)`;
-
-  }
+  // Clip part of svg overlapping img screen
+  const setSVGClip = (svg) => {
+    const screenRect = screenRef.getBoundingClientRect();
+    const svgRect = svg.getBoundingClientRect();
+    svg.style.clipPath = `inset(0 ${svgRect.right - screenRect.left + 1}px 0 0)`
+};
 
   const visionImg = document.querySelector('.vision-img');
 
-  const visionCards = Array.from(document.querySelectorAll('.vision-card'));
+  const visionCards = Array.from(document.querySelectorAll('.vision-card-wrap'));
   const visionSvgs = Array.from(document.querySelectorAll('.vision-dash'));
   visionSvgs.forEach((svg, idx) => {
+    setSVGClip(svg)
+
     const cover = svg.querySelector('path.cover');
-    positionPath(svg, idx);
     cover.style.strokeDasharray = cover.getTotalLength();
     cover.style.strokeDashoffset = '0';
-
     cover.offsetWidth;
 
     cover.style.transition = 'stroke-dashoffset .75s ease-in';
     cover.style.transitionDelay = `${idx * .4}s`
-
-    dashObserver.observe(cover);
+    visionCards[idx].addEventListener('transitionend', () => {
+       cover.style.strokeDashoffset = `-${cover.getTotalLength()}`
+    }, {once:true})
   })
 
 
@@ -624,7 +616,6 @@ if(window.innerWidth > 768) {
       })
     }
   })
-  console.log(lineMap)
 
   lineMap.forEach(obj => {
     if(obj.hasSpans) {
@@ -882,7 +873,6 @@ if (controlBtn) {
             } else if (seamlessWidth && offset1 >= 0) {
               offset1 -= seamlessWidth;
             }
-            console.log(offset1)
 
             positionTestimonyCards()
           })
@@ -906,7 +896,7 @@ window.addEventListener('resize', () => {
   positionTestimonyCards();
   setExampleText()
   placeSSItems()
-  visionSvgs.forEach((svg, idx) => positionPath(svg, idx))
+  visionSvgs.forEach(svg => setSVGClip(svg))
 
   setAOS()
 
@@ -960,7 +950,6 @@ window.addEventListener('resize', () => {
         const wrapRect = wrap.getBoundingClientRect();
         const textRect = largeText.getBoundingClientRect();
         const dif = wrapRect.width - textRect.width
-        console.log(dif)
         if(dif < 10) {
           largeText.textContent = largeText.textContent.slice(0, -1)
         } else if(dif > 150) {

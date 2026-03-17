@@ -351,8 +351,10 @@ svg .shown {
   flex-direction:column;
   gap:.35rem;
 }
+
+/* Process card specific queries */
   .process-card-front .inter-light{
-  min-height:none;
+  min-height:unset;
   }
   @media (min-width:768px){
   .process-card-front .inter-light{
@@ -384,6 +386,7 @@ svg .shown {
   min-height:5em;
 }
 }
+
 .arrow-bg {
   position: absolute;
   top: 10px;
@@ -534,11 +537,24 @@ svg .shown {
   height:100%;
 }
 
-.vision-img {
+.vision-img-wrap {
   right: 0;
   bottom: 0;
-  width: 50%;
   position: absolute;
+  width: 50%;
+}
+
+.vision-img {
+  width: 100%
+}
+
+.screen-ref {
+  position: absolute;
+  left: 10.5%;
+  top: 4.5%;
+  width: 80%;
+  height: 74%;
+  pointer-events: none;
 }
 
 .vision-card .card-num {
@@ -564,17 +580,17 @@ svg .shown {
 }
 
 .dash-1 {
-  bottom: -53%;
+  top: 105%;
   left: 50%
 }
 
 .dash-2 {
-  bottom: -53%;
+  top: 105%;
   left: 50%;
 }
 
 .dash-3 {
-  bottom: -53%;
+  top: 105%;
   left: 50%;
 }
 
@@ -1179,7 +1195,7 @@ a{
   .vision-card {
     min-height: unset;
   }
-  .vision-img {
+  .vision-img-wrap {
     position: relative;
     width: 75%;
   }
