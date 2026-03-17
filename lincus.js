@@ -4,7 +4,7 @@ const leftCtx = leftCanvas.getContext('2d');
 const rightCanvas = document.getElementById('dot-canvas-right');
 const rightCtx = rightCanvas.getContext('2d');
 
-
+// Hero circle attributes
 const leftLayers = [
   { radius: 40, count: 4, speed: -0.00003, size: 14 },
   { radius: 90, count: 7, speed: 0.00002, size: 12 },
@@ -28,6 +28,7 @@ const colors = [
 
 let circleFrame = null;
 
+// Hero circle resize
 function resize(canvas, ctx) {
   const dpr = window.devicePixelRatio || 1;
   const width = window.innerWidth;
@@ -51,6 +52,7 @@ function resize(canvas, ctx) {
   return { cx: (canvas === leftCanvas ? 70 : width - 70), cy: (canvas === leftCanvas ? height / 2.55 : height / 2.5) };
 }
 
+// Draw hero circles
 function draw(ctx, cx, cy, deltaTime, layers) {
   if (!ctx) return;
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -69,7 +71,7 @@ function draw(ctx, cx, cy, deltaTime, layers) {
   });
 }
 
-
+// Hero circles loop
 function render() {
   const left = resize(leftCanvas, leftCtx);
   const right = resize(rightCanvas, rightCtx);
@@ -118,6 +120,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const rightLength = fileSmileR.getTotalLength();
   const fileLines = Array.from(fileIcon.querySelectorAll('#file-lines path'));
 
+  // Odometers
   const createOdometer = (el, value) => {
     const odometer = new Odometer({
         el: el,
@@ -126,6 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
     odometer.update(value);
   };
 
+  // Set file icon strokes
   const setLineStrokes = () => {
     fileLines.forEach(line => {
       length = line.getTotalLength();
@@ -144,6 +148,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   setSmileStroke();
 
+  // Animate contributions icon
   const aniGitCircles = () => {
     gitCircles.forEach(circle => {
       circle.style.transitionDelay = `${Math.random() * (250 + 750) + 250}ms`;
@@ -151,10 +156,12 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  // Animate faculty icon
   const aniFacultyIcons = () => {
     facultyIcons.forEach(icon => icon.classList.add('shown'));
   }
 
+  // Animate file icon
   const aniFileIcon = () => {
     fileEyeL.style.transition = 'transform .2s ease';
     fileEyeR.style.transition = 'transform .2s ease';
@@ -205,7 +212,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }, { once: true });
 
 
-
+  // Physics circle animation (vert + horizontal)
   const svgEl = document.getElementById('circles-svg');
   const svgElSM = document.getElementById('circles-svg-sm');
   const vb = svgEl.viewBox.baseVal
@@ -250,7 +257,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  console.log(nodeGroupsSM)
   const nodesSM = nodeGroupsSM.nodes().map((gEl) => {
     const g = d3.select(gEl);
     const circle = g.select('circle');
@@ -492,6 +498,32 @@ if(window.innerWidth > 768) {
 }
 
 
+  // Grow words in random order
+  const bubble = document.querySelector('.word-bubble');
+  const bubbleWords = Array.from(bubble.querySelectorAll('path'));
+
+  let wordInterval = null;
+
+  const bubbleObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        wordInterval = setInterval(() => {
+          if(bubbleWords.length === 0) {
+            clearInterval(wordInterval);
+             wordInterval = null;
+             return;
+          }
+          const rand = Math.floor(Math.random() * (bubbleWords.length - 1));
+          const word = bubbleWords.splice(rand, 1)[0];
+          word.classList.add('grown');
+
+        }, 75)
+        bubbleObserver.unobserve(bubble)
+      }
+    })
+  }, { threshold: .9 })
+
+  bubbleObserver.observe(bubble)
 
   const processCards = Array.from(document.querySelectorAll('.process-card'));
   processCards.forEach(card => {
@@ -539,6 +571,8 @@ if(window.innerWidth > 768) {
 
   }
 
+  const visionImg = document.querySelector('.vision-img');
+
   const visionCards = Array.from(document.querySelectorAll('.vision-card'));
   const visionSvgs = Array.from(document.querySelectorAll('.vision-dash'));
   visionSvgs.forEach((svg, idx) => {
@@ -553,8 +587,8 @@ if(window.innerWidth > 768) {
     cover.style.transitionDelay = `${idx * .4}s`
 
     dashObserver.observe(cover);
-
   })
+
 
 
 
@@ -711,7 +745,10 @@ function buildTestimonies() {
   const step = cardWidth + testGap;
 
   const containerWidth = testimoniesRow1.offsetWidth || window.innerWidth;
-  const neededCards = Math.ceil((containerWidth + window.innerWidth) / step) + 1;
+  let neededCards = Math.ceil((containerWidth + window.innerWidth) / step) + 1;
+  if(window.innerWidth < 450) {
+    neededCards = 4
+  }
   const passesNeeded = Math.ceil(neededCards / row1Tests.length);
 
   // add additional passes as required
@@ -728,7 +765,7 @@ function buildTestimonies() {
 }
 
 function getTestimonyCardWidth() {
-  const firstCard = cardDivs1[0] || cardDivs2[0];
+  const firstCard = cardDivs1[0];
   return firstCard ? firstCard.offsetWidth : 0;
 }
 
@@ -767,15 +804,30 @@ function animateTestimonies() {
   requestAnimationFrame(animateTestimonies);
 }
 
-function playTestimonies() {
-  if (!updateTestimonies) {
-    updateTestimonies = true;
-    if (!testimonyAnimating) animateTestimonies();
-  }
-}
+let paused = false;
 
-function pauseTestimonies() {
-  updateTestimonies = false;
+
+function pausePlayTestimonies() {
+  if (!paused) {
+    updateTestimonies = false;
+    paused = true;
+    controlBtn.classList.add('paused');
+    controlBtn.setAttribute('aria-label', 'Play testimonials carousel');
+    controlBtn.setAttribute('aria-pressed', 'true');
+    // Change icon to play
+    controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="currentColor"/></svg>';
+
+  } else {
+      updateTestimonies = true
+      paused = false
+      if (!testimonyAnimating) animateTestimonies();
+      controlBtn.classList.remove('paused');
+      controlBtn.setAttribute('aria-label', 'Pause testimonials carousel');
+      controlBtn.setAttribute('aria-pressed', 'false');
+      // Change icon to pause
+      controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/></svg>';
+
+  }
 }
 
 buildTestimonies();
@@ -784,58 +836,65 @@ requestAnimationFrame(() => {
   animateTestimonies();
 });
 
+
+
 // Pause/Play button functionality
 const controlBtn = document.getElementById('testimonials-control-btn');
 if (controlBtn) {
   controlBtn.addEventListener('click', () => {
-    if (updateTestimonies) {
-      pauseTestimonies();
-      controlBtn.classList.add('paused');
-      controlBtn.setAttribute('aria-label', 'Play testimonials carousel');
-      controlBtn.setAttribute('aria-pressed', 'true');
-      // Change icon to play
-      controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="currentColor"/></svg>';
-    } else {
-      playTestimonies();
-      controlBtn.classList.remove('paused');
-      controlBtn.setAttribute('aria-label', 'Pause testimonials carousel');
-      controlBtn.setAttribute('aria-pressed', 'false');
-      // Change icon to pause
-      controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/></svg>';
-    }
-  });
-
-  // Keyboard support
-  controlBtn.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      controlBtn.click();
-    }
-  });
-
-  // Pause on hover
-  const testimoniesRow = document.querySelector('.testimonies-row-1');
-  if (testimoniesRow) {
-    testimoniesRow.addEventListener('mouseenter', () => {
-      if (updateTestimonies) {
-        pauseTestimonies();
-        controlBtn.classList.add('paused');
-        controlBtn.setAttribute('aria-label', 'Play testimonials carousel');
-        controlBtn.setAttribute('aria-pressed', 'true');
-        controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="currentColor"/></svg>';
+    pausePlayTestimonies()
+    // Keyboard support
+    controlBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        controlBtn.click();
       }
     });
+  })
+    // Pause on hover
+    const testimoniesRow = document.querySelector('.testimonies-row-1');
+    if (testimoniesRow) {
+      testimoniesRow.addEventListener('mouseenter', () => {
+        pausePlayTestimonies();
+      });
 
-    testimoniesRow.addEventListener('mouseleave', () => {
-      if (!updateTestimonies) {
-        playTestimonies();
-        controlBtn.classList.remove('paused');
-        controlBtn.setAttribute('aria-label', 'Pause testimonials carousel');
-        controlBtn.setAttribute('aria-pressed', 'false');
-        controlBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/></svg>';
-      }
+      testimoniesRow.addEventListener('mouseleave', () => {
+        pausePlayTestimonies()
     });
-  }
+
+
+      testimoniesRow.addEventListener('pointerdown', (downEvent) => {
+        let startX = downEvent.clientX;
+        let dragFrame = null;
+        let endX = null;
+        const drag = (moveEvent) => {
+          if (dragFrame) {
+            cancelAnimationFrame(dragFrame);
+          }
+          dragFrame = requestAnimationFrame(() => {
+            const currX = moveEvent.clientX;
+            const dx = currX - startX;
+            startX = currX;
+            offset1 += dx
+
+            if (seamlessWidth && offset1 <= -seamlessWidth) {
+              offset1 += seamlessWidth;
+            } else if (seamlessWidth && offset1 >= 0) {
+              offset1 -= seamlessWidth;
+            }
+            console.log(offset1)
+
+            positionTestimonyCards()
+          })
+        }
+        testimoniesRow.addEventListener('pointermove', drag);
+        window.addEventListener('pointerup', () => {
+          testimoniesRow.removeEventListener('pointermove', drag);
+        }, {once: true})
+      })
+
+
+    }
 }
 
 window.addEventListener('resize', () => {
@@ -848,6 +907,8 @@ window.addEventListener('resize', () => {
   setExampleText()
   placeSSItems()
   visionSvgs.forEach((svg, idx) => positionPath(svg, idx))
+
+  setAOS()
 
   if(window.innerWidth > 768) {
     if(currSim === 'small') {
@@ -918,9 +979,9 @@ window.addEventListener('resize', () => {
 
 
   const screenshotImg = document.querySelector('.screenshot');
-  const searchBox = document.querySelector('.screenshot-item.search');
-  const connectBox = document.querySelector('.screenshot-item.connect');
-  const filterBox = document.querySelector('.screenshot-item.filter')
+  const searchBox = document.querySelector('.screenshot-item.search:not(.sm)');
+  const connectBox = document.querySelector('.screenshot-item.connect:not(.sm)');
+  const filterBox = document.querySelector('.screenshot-item.filter:not(.sm)')
 
   const placeSSItems = () => {
     if(window.innerWidth > 1400) {
@@ -929,21 +990,50 @@ window.addEventListener('resize', () => {
       const searchPath = searchBox.querySelector('.item-path');
       const searchMove = Math.round((SSRect.top + (SSRect.height * .15)) - (searchRect.top + (searchRect.height / 2)))
       searchBox.style.marginTop = `${searchMove}px`
-      searchPath.style.left = `${-(searchPath.getBoundingClientRect().width - 4)}px`
 
       const connectPath = connectBox.querySelector('.item-path');
-      connectPath.style.left = `${-(connectPath.getBoundingClientRect().width - 4)}px`
-
+      if(connectPath) {
+        connectPath.style.left = `${-(connectPath.getBoundingClientRect().width - 4)}px`
+      }
 
       const filterPath = filterBox.querySelector('.item-path');
-      const fPathRect = filterPath.getBoundingClientRect();
-      const filterRect = filterBox.getBoundingClientRect();
-      filterPath.style.top = `${-(fPathRect.height - 4)}px`;
-      filterBox.style.marginTop = `${Math.round(Math.abs((fPathRect.top + (fPathRect.height * .3)) - (SSRect.top + (SSRect.height * .35))))}px`;
+      if(filterPath) {
+        const fPathRect = filterPath.getBoundingClientRect();
+        filterBox.style.marginTop = `${Math.round(Math.abs((fPathRect.top + (fPathRect.height * .3)) - (SSRect.top + (SSRect.height * .35))))}px`;
+      }
+
     }
 
   }
   placeSSItems()
+
+  const summarizeBox = document.querySelector('.summarize')
+  function setAOS() {
+    if(window.innerWidth < 1400) {
+      filterBox.setAttribute('data-aos', 'fade-down');
+      searchBox.setAttribute('data-aos', 'fade-down');
+    } else {
+      filterBox.setAttribute('data-aos', 'fade-right');
+      searchBox.setAttribute('data-aos', 'fade-left')
+    }
+
+    if(window.innerWidth < 1200) {
+      visionImg.setAttribute('data-aos', 'fade-up')
+      visionImg.setAttribute('data-aos-delay', '0')
+    } else {
+      visionImg.setAttribute('data-aos', 'fade-left')
+      visionImg.setAttribute('data-aos-delay', '450')
+    }
+
+    if(window.innerWidth < 996) {
+      summarizeBox.setAttribute('data-aos', 'fade-up');
+    } else {
+      summarizeBox.setAttribute('data-aos', 'fade-right')
+    }
+  }
+
+  setAOS()
+
 })
 
 const delayMin = 50;
