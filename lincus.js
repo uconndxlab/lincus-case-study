@@ -668,6 +668,11 @@ const testimonies = [
     quote: '“Without Lincus, I would have to manually search individual department websites and faculty pages to piece together expertise areas, a time‑consuming and far less efficient process. Lincus streamlines all of that into one reliable tool.”',
     name: 'Kaylei Arcangel'
   }
+  ,
+  {
+    quote: '“The profile view is fantastic, I can get at a glance the areas of research and contributions and connections to other researchers that I would not have found otherwise.”',
+    name: 'Greg Colati'
+  }
 ];
 
 // single testimony lane (we'll duplicate the list for seamless looping)
