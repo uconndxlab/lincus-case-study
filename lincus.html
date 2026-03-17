@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lincus</title>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="lincus.css">
@@ -21,13 +22,7 @@
 <body>
 <header class="w-100 d-flex justify-content-between text-white bg-black px-5 py-3">
   <span class="fs-4">Insitutional Insights & Innovation</span>
-  <ul class="list-unstyled d-flex fs-6 gap-3 mb-0 align-items-center">
-    <li>People</li>
-    <li>Blog</li>
-    <li class="selected">Work</li>
-    <li>Connect</li>
-    <li>Big News</li>
-  </ul>
+
 </header>
 
 <main>
@@ -47,7 +42,7 @@
   </section>
 
   <!-- Overview -->
-  <section>
+  <section id="overview">
     <div class="container overview position-relative">
       <span class="text-start inter-light fs-5">01 Overview</span>
       <div class="row mb-2">
@@ -139,13 +134,13 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 mb-1 mb-lg-0 mx-auto mt-1" data-aos="fade-up" data-aos-delay="350">
+        <div class="col-lg-4 col-md-6 mb-1 mb-lg-0 mx-auto mt-1 overflow-hidden" data-aos="fade-up" data-aos-delay="350">
           <div class="col-12 d-flex stat-wrap radius faculty align-items-center justify-content-between px-2 h-100">
           <div class="stat d-flex flex-column ms-3">
             <div class="faculty-odometer odometer-auto-theme" style="font-size: 30px; font-weight: bold; display: inline-block;">0</div>
             <span class="fs-6 lust-light stat-label">Faculty</span>
           </div>
-          <svg width="179" height="156" viewBox="0 0 179 156" fill="none" class="icon align-self-end" xmlns="http://www.w3.org/2000/svg">
+          <svg width="179" height="156" viewBox="0 0 179 156" fill="none" class="icon align-self-end overflow-hidden" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.3" id="faculty-icon-1">
               <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
               <path d="M21.7939 35.9307C24.7905 35.9307 27.7417 36.2826 30.6475 36.9863C33.5533 37.6901 36.4144 38.7458 39.2295 40.1533C40.546 40.8344 41.602 41.8214 42.3965 43.1152C43.191 44.4092 43.5879 45.8284 43.5879 47.3721V55H0V47.3721C2.93195e-05 45.8284 0.396859 44.4092 1.19141 43.1152C1.98592 41.8214 3.04185 40.8343 4.3584 40.1533C7.1733 38.7459 10.0338 37.6901 12.9395 36.9863C15.8453 36.2826 18.7973 35.9307 21.7939 35.9307ZM33.3779 6.17773V14.415H31.3184V7.31055L29.2588 8.44336V14.3916C29.3357 14.4647 29.4144 14.5375 29.4902 14.6133C31.6239 16.7471 32.6903 19.3123 32.6904 22.3086C32.6904 25.3051 31.624 27.8709 29.4902 30.0049C27.3563 32.1389 24.7906 33.206 21.7939 33.2061C18.7973 33.2061 16.2317 32.1389 14.0977 30.0049C11.9637 27.8709 10.8965 25.3052 10.8965 22.3086C10.8966 19.3122 11.9639 16.7471 14.0977 14.6133C14.3405 14.3704 14.5897 14.142 14.8438 13.9268V8.44336L10.7256 6.17773L22.0518 0L33.3779 6.17773Z" fill="#F8B81D" fill-opacity="0.8"/>
@@ -208,7 +203,7 @@
   </section>
 
   <!-- Origins -->
-  <section>
+  <section id="origins">
     <div class="container mt-5">
       <span class="text-start inter-light fs-5">02 Origins</span>
       <div class="row mb-2">
@@ -223,8 +218,9 @@
         </p>
       </div>
 
-      <div class="row circles-row" data-aos="fade-in" data-aos-delay="800">
-        <svg width="100%" height="100%" viewBox="-40 0 1500 450" fill="none" xmlns="http://www.w3.org/2000/svg" id="circles-svg" style="overflow: visible;">      <!-- Left cluster -->
+      <div class="row circles-row" data-aos="fade-in" data-aos-delay="800" data-aos-once="true">
+        <svg width="100%" height="100%" viewBox="-40 0 1500 450" fill="none" xmlns="http://www.w3.org/2000/svg" id="circles-svg" style="overflow: visible;">
+        <!-- Left cluster -->
         <path id="line-1-2" data-rel-circles="1-2" d="M60.5 90.5L202.5 223.5" stroke="#CED0D6" stroke-width="5"/>
         <path id="line-1-3" data-rel-circles="1-3" d="M60.5 90.5L221.5 35.5" stroke="#CED0D6" stroke-width="4"/>
         <path id="line-2-3" data-rel-circles="2-3" d="M202.5 223.5L221.5 35.5" stroke="#CED0D6" stroke-width="4"/>
@@ -279,11 +275,64 @@
           </g>
         </svg>
       </div>
+
+      <div class="row circles-row-sm" data-aos="fade-in" data-aos-delay="800" data-aos-once="true">
+        <svg width="1208" height="427" viewBox="0 0 1208 427" fill="none" xmlns="http://www.w3.org/2000/svg" id="circles-svg-sm">
+        <path id="sm_line-1-2" data-rel-circles="1-2" d="M100.5 144.5L242.5 277.5" stroke="#CED0D6" stroke-width="5"/>
+        <path id="sm_line-1-3" data-rel-circles="1-3" d="M100.5 144.5L261.5 89.5" stroke="#CED0D6" stroke-width="4"/>
+        <path id="sm_line-2-3" data-rel-circles="2-3" d="M242.5 277.5L261.5 89.5" stroke="#CED0D6" stroke-width="4"/>
+        <path id="sm_line-2-4" data-rel-circles="2-4" d="M242.5 277.5L415 219" stroke="#CED0D6" stroke-width="6"/>
+        <path id="sm_line-4-5" data-rel-circles="4-5" d="M415 219L616.5 155.5" stroke="#CED0D6" stroke-width="13"/>
+        <path id="sm_line-5-6" data-rel-circles="5-6" d="M616.5 155.5L839 160" stroke="#CED0D6" stroke-width="8"/>
+        <path id="sm_line-5-7" data-rel-circles="5-7" d="M616.5 155.5L933 331" stroke="#CED0D6" stroke-width="8"/>
+        <path id="sm_line-6-7" data-rel-circles="6-7" d="M839 160L933 331" stroke="#CED0D6" stroke-width="6"/>
+        <path id="sm_line-6-8" data-rel-circles="6-8" d="M839 160L1004.5 77.5" stroke="#CED0D6" stroke-width="5"/>
+        <path id="sm_line-7-8" data-rel-circles="7-8" d="M933 331L1004.5 77.5" stroke="#CED0D6" stroke-width="5"/>
+        <path id="sm_line-7-9" data-rel-circles="7-9" d="M933 331L1128.5 237.5" stroke="#CED0D6" stroke-width="2"/>
+        <g id="sm_circle-text-1">
+        <circle id="sm_circle-1" cx="88.5" cy="146.5" r="15.5" fill="#60A7CD"/>
+        <text id="sm_label-1" transform="translate(109.887 192) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0" y="19.2727">Faculty G</tspan></text>
+        </g>
+        <g id="sm_circle-text-2">
+        <circle id="sm_circle-2" cx="239.5" cy="281.5" r="23.5" fill="#5439CD"/>
+        <text id="sm_label-2" transform="translate(271 327) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0.3125" y="19.2727">Faculty H</tspan></text>
+        </g>
+        <g id="sm_circle-text-3">
+        <circle id="sm_circle-3" cx="258.5" cy="85.5" r="23.5" fill="#7A3389"/>
+        <text id="sm_label-3" transform="translate(285 121) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0.527344" y="19.2727">Faculty</tspan></text>
+        </g>
+        <g id="sm_circle-text-4">
+        <circle id="sm_circle-4" cx="406" cy="223" r="32" fill="#426902"/>
+        <text id="sm_label-4" transform="translate(446 267) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0" y="19.2727">Faculty F</tspan></text>
+        </g>
+        <g id="sm_circle-text-5">
+        <circle id="sm_circle-5" cx="599.5" cy="172.5" r="82.5" fill="#50558C"/>
+        <text id="sm_label-5" transform="translate(691 218) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0" y="19.2727">Faculty A</tspan></text>
+        </g>
+        <g id="sm_circle-text-6">
+        <circle id="sm_circle-6" cx="834" cy="166" r="59" fill="#A10F0F"/>
+        <text id="sm_label-6" transform="translate(899.387 209.613) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0" y="19.2727">Faculty B</tspan></text>
+        </g>
+        <g id="sm_circle-text-7">
+        <circle id=sm_"circle-7" cx="923" cy="331" r="37" fill="#86B9FF"/>
+        <text id="sm_label-7" transform="translate(968 376) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0" y="19.2727">Faculty C</tspan></text>
+        </g>
+        <g id="sm_circle-text-8">
+        <circle id="sm_circle-8" cx="1005.5" cy="76.5" r="23.5" fill="#D16DD7"/>
+        <text id="sm_label-8" transform="translate(1040 122) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0" y="19.2727">Faculty D</tspan></text>
+        </g>
+        <g id="sm_circle-text-9">
+        <circle id="sm_circle-9" cx="1124.5" cy="240.5" r="15.5" fill="#F38415"/>
+        <text id="sm_label-9" transform="translate(1144 285) rotate(-90)" fill="#707070" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="20" letter-spacing="0em"><tspan x="0" y="19.2727">Faculty E</tspan></text>
+        </g>
+        </svg>
+
+      </div>
     </div>
   </section>
 
   <!-- Process -->
-  <section>
+  <section id="process">
     <div class="container process mt-3">
       <span class="text-start inter-light fs-5">03 Process</span>
       <div class="row">
@@ -396,7 +445,7 @@
   </section>
 
   <!-- Challenge -->
-  <section>
+  <section id="challenge">
     <div class="container-fluid mt-5 bg-midnight py-5 rounded-top-4">
       <div class="container challenge text-white my-4 pb-5">
         <span class="text-start inter-light fs-5">04 The Challenge</span>
@@ -408,7 +457,7 @@
 
         <div class="row px-md-4 px-lg-5 pt-4 pb-5 d-flex align-items-stretch">
           <div class="col-lg-6 mt-2 d-flex mb-3 mb-md-0">
-            <div class="col-12 ms-auto radius challenge-card left py-5 px-5 d-flex flex-column" data-aos="fade-right">
+            <div class="col-12 ms-auto radius challenge-card left py-3 py-sm-5 px-3 px-sm-5 d-flex flex-column" data-aos="fade-right">
               <span class="fs-2 lust-light mb-2">Problem</span>
                 <ul class="fs-5 inter-light mb-0">
                   <li>Difficult to navigate the site</li>
@@ -423,7 +472,7 @@
 
 
           <div class="col-lg-6 mt-2 d-flex">
-            <div class="col-12 me-auto radius challenge-card py-5 px-5 d-flex flex-column" data-aos="fade-left">
+            <div class="col-12 me-auto radius challenge-card py-3 py-sm-5 px-3 px-sm-5 d-flex flex-column" data-aos="fade-left">
               <span class="fs-2 lust-light mb-2 z-2">Solution</span>
                 <ul class="fs-5 inter-light mb-0">
                   <li>Redesigned Lincus for intuitive, user-friendly navigation</li>
@@ -443,7 +492,7 @@
   </section>
 
   <!-- Vision -->
-<section>
+<section id="vision">
   <div class="container-fluid overflow-hidden vision-wrap bg-yellow pt-5 z-1 rounded-4 position-relative">
     <img class="vision-dots left" src="assets/vision-dots.svg" alt="">
     <img class="vision-dots right" src="assets/vision-dots.svg" alt="">
@@ -603,7 +652,7 @@
   </div>
 </section>
   <!-- Build -->
-  <section>
+  <section id="build">
     <div class="container-fluid build-wrap text-white bg-midnight pt-5 rounded-bottom-4 position-relative">
       <div class="container build-head my-4">
         <span class="text-start inter-light fs-5">06 The Build</span>
@@ -662,7 +711,7 @@ As the sole developer on the project, Maggie worked closely within the i3 ecosys
   </section>
 
   <!-- Result -->
-  <section>
+  <section id="result">
     <div class="result-wrap text-black pt-5 pb-5 position-relative rounded-bottom-4">
       <div class="container result">
             <span class="text-start inter-light fs-5">07 The Result</span>
@@ -861,9 +910,9 @@ As the sole developer on the project, Maggie worked closely within the i3 ecosys
           </div>
         </div>
 
-        <div class="row screenshot-row">
+        <div class="row screenshot-row justify-content-between d-none d-lg-flex">
           <div class="col-5 col-xxl-3 align-items-center d-flex pb-3 order-0">
-            <div class="screenshot-item z-3 filter fs-6 mx-auto p-3 position-relative">
+            <div class="screenshot-item z-3 filter fs-6 ms-5 me-auto mx-xxl-auto p-3 position-relative mb-2 mb-xl-5 mb-xxl-auto">
               <svg width="294" height="85" viewBox="0 0 294 85" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
                 <path d="M293.5 25.2271C293.5 25.2271 209 -9.27318 121.5 3.22754C34 15.7283 11 59.2259 4 79.2272" stroke="url(#paint0_linear_98_5)" stroke-dasharray="3 3"/>
                 <circle cx="4" cy="80.7271" r="4" transform="rotate(-180 4 80.7271)" fill="#F8B81D"/>
@@ -874,6 +923,19 @@ As the sole developer on the project, Maggie worked closely within the i3 ecosys
                   </linearGradient>
                 </defs>
               </svg>
+
+              <svg width="8" height="254" viewBox="0 0 8 254" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path med">
+              <circle cx="4.00001" cy="4" r="4" transform="rotate(90 4.00001 4)" fill="#F8B81D"/>
+              <path d="M4.49996 253.5C4.49996 253.5 4.50006 19.3502 4.50007 3.5" stroke="url(#paint0_linear_102_9)" stroke-dasharray="3 3"/>
+              <defs>
+              <linearGradient id="paint0_linear_102_9" x1="4.60184" y1="-39.9324" x2="4.60179" y2="217.477" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F8B81D"/>
+              <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
+              </linearGradient>
+              </defs>
+              </svg>
+
+
               <span class="z-2 inter-med text-slate-grey position-relative">Filter</span>
               <p class="z-2 mb-0 inter-light text-slate-grey position-relative">by department or campus to narrow your results</p>
             </div>
@@ -881,11 +943,11 @@ As the sole developer on the project, Maggie worked closely within the i3 ecosys
           <div class="col-10 col-xxl-6 mx-auto order-2 order-xxl-1">
             <div class="img-wrap position-relative">
 
-              <img src="assets/lincus-map.png" alt="Screenshot of search page" class="img-fluid screenshot">
+              <img src="assets/lincus-map.png" alt="Screenshot of search page" class="img-fluid screenshot mt-2 mt-xxl-0 radius">
             </div>
           </div>
-          <div class="col-4 col-xxl-3 order-1 order-xxl-2">
-            <div class="screenshot-item search fs-6 mx-auto p-3 position-relative">
+          <div class="col-5 col-xxl-3 order-1 order-xxl-2">
+            <div class="screenshot-item search fs-6 me-5 ms-auto mx-xxl-auto mb-2 mb-xl-5 mb-xxl-auto p-3 w-75 position-relative">
               <svg width="177" height="8" viewBox="0 0 177 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
               <circle cx="173" cy="4" r="4" transform="rotate(-180 173 4)" fill="#F8B81D"/>
               <path d="M0 4.0034C0 4.0034 162.5 4.00046 173.5 4.00047" stroke="url(#paint0_linear_99_6)" stroke-dasharray="3 3"/>
@@ -897,13 +959,64 @@ As the sole developer on the project, Maggie worked closely within the i3 ecosys
               </defs>
               </svg>
 
+
+              <svg width="205" height="181" viewBox="0 0 205 181" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path med">
+              <path d="M42.3731 168.914C42.3731 168.914 98.5535 171.414 132.554 128.414C166.554 85.4145 159.418 26.0727 157.184 4.99985" stroke="url(#paint0_linear_145_8)" stroke-dasharray="3 3"/>
+              <circle cx="157.327" cy="5.32708" r="4" transform="rotate(64.6603 157.327 5.32708)" fill="#F8B81D"/>
+              <defs>
+              <linearGradient id="paint0_linear_145_8" x1="160.374" y1="5.4138" x2="64.874" y2="165.914" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F8B81D"/>
+              <stop offset="1" stop-color="#F8B81D" stop-opacity="0.3"/>
+              </linearGradient>
+              </defs>
+              </svg>
               <span class="z-2 inter-med text-slate-grey position-relative">Search</span>
               <p class="z-2 mb-0 inter-light text-slate-grey position-relative">for name or keyword</p>
             </div>
           </div>
         </div>
 
-        <div class="row mt-5">
+        <!-- Small Screenshots -->
+         <div class="screenshot-row-sm mx-auto mt-5 d-flex d-lg-none flex-column justify-content-center">
+           <div class="row align-items-start">
+             <div class="col-12 col-md-5 d-flex flex-column justify-content-center justify-content-md-start mb-5">
+               <div class="screenshot-item sm mb-3 w-80 filter fs-6 m-auto p-3 position-relative w-90">
+                 <span class="z-2 inter-med text-slate-grey position-relative">Filter</span>
+                 <p class="z-2 mb-0 inter-light text-slate-grey position-relative">by department or campus to narrow your results</p>
+               </div>
+               <img src="assets/lincus-filters.png" alt="Lincus Filtering" class="h-500-px mx-auto d-block d-md-none radius">
+             </div>
+             <div class="col-12 col-md-7 d-flex flex-column justify-content-center justify-content-md-start">
+               <div class="screenshot-item sm mb-3 w-80 connect fs-6 m-auto p-3 position-relative w-90">
+                 <span class="z-2 inter-med text-slate-grey position-relative">Connect</span>
+                 <p class="z-2 mb-0 inter-light text-slate-grey position-relative">with individuals based on their expertise</p>
+               </div>
+               <img src="assets/lincus-connect.png" alt="Lincus Connections" class=" w-90 mx-auto d-block d-md-none radius">
+             </div>
+           </div>
+           <div class="row align-items-start d-none d-md-flex">
+             <div class="col-5 d-flex">
+               <img src="assets/lincus-filters.png" alt="Lincus Filtering" class="h-500-px mx-auto radius">
+             </div>
+             <div class="col-7 d-flex">
+              <img src="assets/lincus-connect-1.png" alt="Lincus Connections" class="h-500-px mx-auto radius">
+             </div>
+           </div>
+           <div class="row align-items-center flex-column mt-5 gap-3 gap-md-4">
+             <div class="col-10 col-sm-7">
+              <div class="screenshot-item sm search w-80 filter fs-6 m-auto p-3 position-relative w-90">
+                 <span class="z-2 inter-med text-slate-grey position-relative">Search</span>
+                 <p class="z-2 mb-0 inter-light text-slate-grey position-relative">for name or keyword</p>
+               </div>
+             </div>
+             <div class="col-12">
+               <img src="assets/lincus-search.png" alt="Lincus Searchbar" class="w-100 radius">
+             </div>
+
+           </div>
+         </div>
+
+        <div class="row mt-5 d-none d-lg-flex">
           <div class="col-7"></div>
           <div class="col-3 d-flex justify-content-end ms-5">
             <div class="screenshot-item connect fs-6 m-auto p-3 position-relative">
@@ -926,7 +1039,7 @@ As the sole developer on the project, Maggie worked closely within the i3 ecosys
         <div class="row summarize-row align-items-center">
           <div class="col-lg-3 col-12 w-fit mx-auto">
             <div class="screenshot-item summarize fs-6 m-auto p-3 position-relative">
-              <svg width="177" height="8" viewBox="0 0 177 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path">
+              <svg width="177" height="8" viewBox="0 0 177 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-path d-none d-xxl-block">
               <circle cx="4" cy="4" r="4" fill="#F8B81D"/>
               <path d="M177 3.99612C177 3.99612 14.5001 3.99905 3.5 3.99905" stroke="url(#paint0_linear_102_9)" stroke-dasharray="3 3"/>
               <defs>
@@ -965,7 +1078,7 @@ As the sole developer on the project, Maggie worked closely within the i3 ecosys
   </section>
 
   <!-- Looking Ahead -->
-  <section>
+  <section id="looking-ahead">
     <div class="container looking-ahead pt-5 mt-4" style="min-height: 1000px">
       <span class="text-start inter-light fs-5">08 Looking Ahead</span>
       <div class="row mb-2">
