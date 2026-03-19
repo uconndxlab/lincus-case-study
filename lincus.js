@@ -658,20 +658,24 @@ if(window.innerWidth > 768) {
 const testimonies = [
   {
     quote: '“Lincus serves as a critical first step by making UConn’s research ecosystem visible and accessible, allowing students to explore ongoing projects across disciplines.”',
-    name: 'Micah Heumann'
+    name: 'Micah Heumann',
+    title: 'Director of the Office of Undergraduate Research'
   },
   {
     quote: '“I am so proud to be the biggest, baddest blue dot in the UConn museum multiverse. I\'ve been on Lincus since 2013 or so and this overhaul makes it much more intuitive, useful and updateable.”',
-    name: 'Clarissa Ceglio, Ph.D.'
+    name: 'Clarissa Ceglio, Ph.D.',
+    title:'Associate Professor of Digital Humanities, Associate Director of Collaborative Research, UCHI'
   },
   {
     quote: '“Without Lincus, I would have to manually search individual department websites and faculty pages to piece together expertise areas, a time‑consuming and far less efficient process. Lincus streamlines all of that into one reliable tool.”',
-    name: 'Kaylei Arcangel'
+    name: 'Kaylei Arcangel',
+    title: 'Limited Submission Coordinator,OVPR'
   }
   ,
   {
     quote: '“The profile view is fantastic, I can get at a glance the areas of research and contributions and connections to other researchers that I would not have found otherwise.”',
-    name: 'Greg Colati'
+    name: 'Greg Colati',
+    title: 'Special Projects Librarian'
   }
 ];
 
@@ -712,8 +716,15 @@ function createTestimonyCard(testimony) {
   name.className = 'testimony-name lust-light fs-8';
   name.textContent = testimony.name;
 
+  const title = document.createElement('span');
+  title.className = 'testimony-title lust-light fs-8';
+  title.textContent = testimony.title || '';
+  
+
   text.appendChild(quote);
   text.appendChild(name);
+  text.appendChild(title);
+
 
   card.appendChild(text);
   wrap.appendChild(card);
