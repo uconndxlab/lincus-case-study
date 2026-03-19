@@ -256,6 +256,11 @@ svg .shown {
 .process-card {
   perspective: 1000px;
   -webkit-perspective: 1000px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  touch-action: manipulation;
   cursor: pointer;
   min-height: 320px;
 }
@@ -270,6 +275,9 @@ svg .shown {
 
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
