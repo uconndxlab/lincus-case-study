@@ -208,26 +208,19 @@ window.addEventListener('DOMContentLoaded', () => {
   grants.parentElement.addEventListener('transitionend', () => {
     aniFileIcon();
     const grantOdometer = grants.querySelector('.grants-odometer');
-    createOdometer(grantOdometer, 21909);
+    createOdometer(grantOdometer, 8241);
   }, { once: true });
 
 
   // Physics circle animation (vert + horizontal)
   const svgEl = document.getElementById('circles-svg');
-  const svgElSM = document.getElementById('circles-svg-sm');
   const vb = svgEl.viewBox.baseVal
-  const vbSM = svgElSM.viewBox.baseVal;
   const width = vb.width;
-  const widthSM = vbSM.width;
   const height = vb.height;
-  const heightSM = vbSM.height;
 
   const svg = d3.select('#circles-svg');
   const nodeGroups = svg.selectAll('g[id^="circle-text-"]');
-  const svgSM = d3.select('#circles-svg-sm');
-  const nodeGroupsSM = svgSM.selectAll('g[id^="sm_circle-text-"]')
   svg.style('visibility', 'hidden');
-  svgSM.style('visibility', 'hidden');
 
   const nodes = nodeGroups.nodes().map((gEl) => {
     const g = d3.select(gEl);
@@ -257,35 +250,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  const nodesSM = nodeGroupsSM.nodes().map((gEl) => {
-    const g = d3.select(gEl);
-    const circle = g.select('circle');
-    const id = +g.attr('id').split('-').pop();
-    const x0 = +circle.attr('cx');
-    const y0 = +circle.attr('cy');
-
-    const cx = widthSM / 2;
-    const cy = heightSM / 2;
-    const startSpread = 750;
-
-
-    const r = +circle.attr('r');
-
-    return {
-      id,
-      gEl,
-      circleEl: circle.node(),
-      r,
-      x: cx + (Math.random() - 0.25) * startSpread,
-      y: cy + (Math.random() - 0.5) * startSpread,
-      x0,
-      y0
-    }
-  })
-
 
   const nodeById = new Map(nodes.map(n => [n.id, n]));
-  const nodeSMById = new Map(nodesSM.map(n => [n.id, n]));
 
   const linkPaths = svg.selectAll('path[data-rel-circles]');
   const links = linkPaths.nodes().map((pEl) => {
@@ -294,17 +260,6 @@ window.addEventListener('DOMContentLoaded', () => {
     return {
       source: nodeById.get(a),
       target: nodeById.get(b),
-      pEl
-    }
-  })
-
-  const linkPathSM = svgSM.selectAll('path[data-rel-circles]');
-  const linksSM = linkPathSM.nodes().map((pEl) => {
-    const p = d3.select(pEl);
-    const [a, b] = p.attr('data-rel-circles').split('-').map(Number);
-    return {
-      source: nodeSMById.get(a),
-      target: nodeSMById.get(b),
       pEl
     }
   })
@@ -331,26 +286,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   nodeGroups.data(nodes);
-  nodeGroupsSM.data(nodesSM)
   function clampNodes() {
     const pad = 8;
     for (const d of nodes) {
-      const minX = d.r + pad;
-      const maxX = width - d.r - pad;
-      const minY = d.r + pad;
-      const maxY = height - d.r - pad;
-
-      if (d.x < minX) { d.x = minX; d.vx = 0; }
-      else if (d.x > maxX) { d.x = maxX; d.vx = 0; }
-
-      if (d.y < minY) { d.y = minY; d.vy = 0; }
-      else if (d.y > maxY) { d.y = maxY; d.vy = 0; }
-    }
-  }
-
-  function clampNodesSM() {
-    const pad = 8;
-    for (const d of nodesSM) {
       const minX = d.r + pad;
       const maxX = width - d.r - pad;
       const minY = d.r + pad;
@@ -381,35 +319,6 @@ window.addEventListener('DOMContentLoaded', () => {
     simulation.force('link').links(links);
   }
 
-  function resetToStartSpreadSM() {
-    const cx = widthSM / 2;
-    const cy = heightSM / 2;
-    const startSpread = 750;
-
-    for (const d of nodesSM) {
-      d.x = cx + (Math.random() - 0.25) * startSpread;
-      d.y = cy + (Math.random() - 0.25) * startSpread;
-      d.vx = 0;
-      d.vy = 0;
-      d.fx = null;
-      d.fy = null;
-    }
-
-    simulationSM.force('link').links(linksSM);
-  }
-
-  const simulationSM = d3.forceSimulation(nodesSM)
-      .velocityDecay(0.65)
-      .alphaDecay(0.02)
-      .force("x", d3.forceX(d => d.x0).strength(0.12))
-      .force("y", d3.forceY(d => d.y0).strength(0.12))
-      .force('link', d3.forceLink(linksSM).id(d => d.id).distance(220).strength(0.08))
-      .force("charge", d3.forceManyBody().strength(-400))
-      .force("center", d3.forceCenter(widthSM / 2, heightSM / 2))
-      .force("collision", d3.forceCollide().radius(d => d.r + 18).iterations(2))
-      .on("tick", renderSM)
-      .stop();
-
 
   const simulation = d3.forceSimulation(nodes)
       .velocityDecay(0.65)
@@ -429,7 +338,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   const circlesRow = document.querySelector('.circles-row');
-  const circlesRowSM = document.querySelector('.circles-row-sm')
+  
   circlesRow.addEventListener('transitionstart', () => {
       svg.style('visibility', 'visible');
       currSim = 'large';
@@ -438,13 +347,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   }, { once: true });
 
-  circlesRowSM.addEventListener('transitionend', () => {
-    svgSM.style('visibility', 'visible');
-    currSim = 'small';
-      requestAnimationFrame(() => {
-        simulationSM.alpha(1).alphaTarget(0).restart();
-      });
-  })
+
 
 function render() {
   clampNodes();
@@ -462,38 +365,13 @@ function render() {
   });
 }
 
-
-
-function renderSM() {
-  clampNodesSM()
-
-  nodesSM.forEach(d => {
-    const dx = d.x - d.x0;
-    const dy = d.y - d.y0;
-    d3.select(d.gEl).attr('transform', `translate(${dx}, ${dy})`);
-  });
-
-  linksSM.forEach(l => {
-    const x1 = l.source.x, y1 = l.source.y;
-    const x2 = l.target.x, y2 = l.target.y;
-    d3.select(l.pEl).attr('d', `M${x1} ${y1} L${x2} ${y2}`);
-  });
-}
-
 if(window.innerWidth > 768) {
   resetToStartSpread();
   render();
   nodeGroups.call(drag(simulation))
   svg.style("visibility", "visible");
 
-} else {
-
-  resetToStartSpreadSM();
-  renderSM();
-  nodeGroupsSM.call(drag(simulationSM))
-  svgSM.style("visibility", "visible");
-
-}
+} 
 
 
   // Grow words in random order
@@ -926,21 +804,14 @@ window.addEventListener('resize', () => {
       svg.style("visibility", "visible");
 
       requestAnimationFrame(() => {
-        simulationSM.stop()
         simulation.alpha(1).restart();
       });
     }
   } else {
     if(currSim === 'large') {
       currSim = 'small';
-        resetToStartSpreadSM();
-        renderSM();
-        nodeGroupsSM.call(drag(simulationSM))
-        svgSM.style("visibility", "visible");
-
         requestAnimationFrame(() => {
         simulation.stop()
-        simulationSM.alpha(1).restart();
       });
     }
   }
